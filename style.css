@@ -1,0 +1,44 @@
+/* Custom Styles and Animations for Marriage Hall Website */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Pulsing background effect for Hero */
+@keyframes pulse-slow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 20s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B111E;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C69926;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E5B83B;
+}
+
+/* Form input custom styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+    cursor: pointer;
+}
