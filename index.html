@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>इन्द्रा गार्डन & मैरिज लॉन, झाँसी | Indra Garden & Banquet Hall Jhansi</title>
-    <!-- Tailwind CSS CDN -->
+    <title>इन्द्रा गार्डन & बैंक्वेट | Indra Garden Jhansi - The Royal Wedding Destination</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,6 +12,7 @@
                 extend: {
                     colors: {
                         gold: {
+                            50: '#FFFDF5',
                             100: '#FDF7E7',
                             200: '#F9ECC4',
                             300: '#F4DD9A',
@@ -21,15 +22,22 @@
                             700: '#9B7415',
                             800: '#6E510C',
                         },
+                        maroon: {
+                            900: '#3B0A11',
+                            800: '#5A121C',
+                            700: '#7E1927',
+                        },
                         royal: {
+                            950: '#060A12',
                             900: '#0B111E',
-                            800: '#131B2E',
-                            700: '#1D2844',
+                            850: '#101828',
+                            800: '#162035',
                         }
                     },
                     fontFamily: {
-                        heading: ['Cinzel', 'Playfair Display', 'serif'],
-                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Cinzel Decorative', 'Cinzel', 'Playfair Display', 'serif'],
+                        body: ['Poppins', 'sans-serif'],
+                        sanskrit: ['Rozha One', 'serif']
                     }
                 }
             }
@@ -38,559 +46,609 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#0B111E] text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-royal-900">
+<body class="bg-royal-950 text-slate-100 font-body antialiased selection:bg-gold-500 selection:text-royal-950 overflow-x-hidden">
 
-    <!-- Top Notification Bar -->
-    <div class="bg-gradient-to-r from-amber-900 via-gold-600 to-amber-900 text-royal-900 font-medium text-xs md:text-sm py-2 px-4 text-center tracking-wider">
-        <span>📍 उन्नाव गेट बाहर, नौगजी कुआं, झाँसी (उ.प्र.) | शादी, रिसेप्शन, बर्थडे बुकिंग हेतु संपर्क: <a href="tel:+919876543210" class="font-bold underline hover:text-white transition">+91 98765 43210</a></span>
+    <!-- Falling Rose Petals Canvas -->
+    <canvas id="petalCanvas" class="fixed inset-0 pointer-events-none z-40"></canvas>
+
+    <!-- Top Shubh Muhurat & Sanskrit Bar -->
+    <div class="bg-gradient-to-r from-maroon-900 via-amber-800 to-maroon-900 border-b border-gold-500/30 text-amber-200 text-xs py-2 px-4 text-center font-medium tracking-widest flex items-center justify-center gap-2 sm:gap-6 flex-wrap">
+        <span>🕉️ || वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ||</span>
+        <span class="hidden md:inline text-gold-400">|</span>
+        <span class="font-bold text-white">✨ 2026-2027 विवाह मुहूर्त बुकिंग जारी है!</span>
+        <span class="hidden md:inline text-gold-400">|</span>
+        <span>📞 कॉल: <a href="tel:+919876543210" class="underline hover:text-white font-bold">+91 98765 43210</a></span>
     </div>
 
-    <!-- Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-[#0B111E]/95 backdrop-blur-md border-b border-gold-500/20 transition duration-300">
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 bg-royal-950/90 backdrop-blur-xl border-b border-gold-500/20 shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Brand Logo / Name -->
-                <a href="#home" class="flex items-center gap-3">
-                    <div class="w-12 h-12 rounded-full border-2 border-gold-400 flex items-center justify-center bg-royal-800 text-gold-400 text-2xl shadow-lg shadow-gold-500/20">
-                        <i class="fa-solid fa-crown"></i>
+                <!-- Royal Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-13 h-13 p-2.5 rounded-full border-2 border-gold-400 bg-gradient-to-br from-maroon-800 to-royal-900 text-gold-300 text-2xl shadow-lg shadow-gold-500/30 group-hover:scale-105 transition duration-300 flex items-center justify-center">
+                        <i class="fa-solid fa-crown text-gold-400"></i>
                     </div>
                     <div>
-                        <span class="text-xl md:text-2xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-400 to-amber-200 block">INDRA GARDEN</span>
-                        <span class="text-[10px] tracking-widest text-gold-400/80 uppercase">Jhansi (Unnao Gate Bahar)</span>
+                        <span class="text-xl sm:text-2xl font-bold font-heading text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-400 to-amber-200 block tracking-wider">
+                            INDRA GARDEN
+                        </span>
+                        <span class="text-[10px] tracking-[0.25em] text-gold-400/90 uppercase block font-medium">
+                            उन्नाव गेट बाहर, झाँसी
+                        </span>
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
-                    <a href="#home" class="text-gold-400 hover:text-white transition">होम (Home)</a>
-                    <a href="#about" class="text-slate-300 hover:text-gold-400 transition">हमारे बारे में</a>
+                <!-- Nav Links -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium tracking-wide">
+                    <a href="#home" class="text-gold-400 hover:text-white transition">होम</a>
+                    <a href="#experience" class="text-slate-300 hover:text-gold-400 transition">Day/Night दृश्य</a>
+                    <a href="#calculator" class="text-amber-300 hover:text-white transition flex items-center gap-1 font-semibold">
+                        <i class="fa-solid fa-calculator text-xs"></i> बजट कैलकुलेटर
+                    </a>
+                    <a href="#muhurat" class="text-slate-300 hover:text-gold-400 transition">विवाह मुहूर्त</a>
                     <a href="#amenities" class="text-slate-300 hover:text-gold-400 transition">सुविधाएँ</a>
-                    <a href="#events" class="text-slate-300 hover:text-gold-400 transition">इवेंट्स</a>
                     <a href="#gallery" class="text-slate-300 hover:text-gold-400 transition">गैलरी</a>
-                    <a href="#packages" class="text-slate-300 hover:text-gold-400 transition">पैकेजेस</a>
-                    <a href="#contact" class="text-slate-300 hover:text-gold-400 transition">लोकेशन & संपर्क</a>
+                    <a href="#contact" class="text-slate-300 hover:text-gold-400 transition">लोकेशन</a>
                 </nav>
 
-                <!-- CTA Button -->
-                <div class="hidden sm:flex items-center gap-4">
-                    <a href="#booking" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-royal-900 font-semibold text-sm shadow-lg shadow-gold-500/30 transition transform hover:-translate-y-0.5">
-                        <i class="fa-regular fa-calendar-check mr-2"></i>तारीख बुक करें
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <!-- Music Play/Pause Toggle -->
+                    <button id="musicToggleBtn" title="शहनाई / संगीत चालू/बंद करें" class="w-10 h-10 rounded-full border border-gold-500/40 bg-royal-800 text-gold-400 hover:bg-gold-500 hover:text-royal-950 transition flex items-center justify-center text-sm shadow-md">
+                        <i class="fa-solid fa-volume-xmark" id="musicIcon"></i>
+                    </button>
+                    <!-- Quick Call CTA -->
+                    <a href="#booking" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 via-amber-500 to-gold-600 hover:from-gold-400 hover:to-amber-400 text-royal-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-gold-500/25 transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-calendar-check"></i> बुकिंग करें
                     </a>
+                    <!-- Mobile Hamburger -->
+                    <button id="mobileMenuBtn" aria-label="Menu" class="lg:hidden text-gold-400 hover:text-white text-2xl p-1">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
                 </div>
-
-                <!-- Mobile Hamburger Button -->
-                <button id="mobileMenuBtn" aria-label="Open Menu" class="lg:hidden text-gold-400 hover:text-white text-2xl focus:outline-none">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-royal-800 border-b border-gold-500/30 px-6 py-5 space-y-4">
-            <a href="#home" class="block text-gold-400 font-medium py-1">होम (Home)</a>
-            <a href="#about" class="block text-slate-300 hover:text-gold-400 py-1">हमारे बारे में</a>
-            <a href="#amenities" class="block text-slate-300 hover:text-gold-400 py-1">सुविधाएँ</a>
-            <a href="#events" class="block text-slate-300 hover:text-gold-400 py-1">इवेंट्स</a>
-            <a href="#gallery" class="block text-slate-300 hover:text-gold-400 py-1">गैलरी</a>
-            <a href="#packages" class="block text-slate-300 hover:text-gold-400 py-1">पैकेजेस</a>
-            <a href="#contact" class="block text-slate-300 hover:text-gold-400 py-1">लोकेशन & संपर्क</a>
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-royal-900/95 border-b border-gold-500/30 px-6 py-5 space-y-3 backdrop-blur-2xl">
+            <a href="#home" class="block text-gold-400 font-semibold py-1">होम</a>
+            <a href="#experience" class="block text-slate-200 hover:text-gold-400 py-1">Day/Night 360° दृश्य</a>
+            <a href="#calculator" class="block text-amber-300 font-semibold py-1">🧮 शादी बजट कैलकुलेटर</a>
+            <a href="#muhurat" class="block text-slate-200 hover:text-gold-400 py-1">📅 2026 विवाह मुहूर्त</a>
+            <a href="#amenities" class="block text-slate-200 hover:text-gold-400 py-1">सुविधाएँ व व्यवस्थाएं</a>
+            <a href="#gallery" class="block text-slate-200 hover:text-gold-400 py-1">फ़ोटो व रील्स गैलरी</a>
+            <a href="#contact" class="block text-slate-200 hover:text-gold-400 py-1">लोकेशन व संपर्क</a>
             <div class="pt-2">
-                <a href="#booking" class="block text-center w-full py-3 rounded-lg bg-gradient-to-r from-gold-500 to-amber-600 text-royal-900 font-bold">
-                    तारीख चेक करें
+                <a href="#booking" class="block text-center w-full py-3 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 text-royal-950 font-bold text-sm">
+                    तारीख की उपलब्धता जांचें
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <!-- Background Overlay Image -->
+    <!-- Grand Hero Section with Video/Atmospheric Vibe -->
+    <section id="home" class="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
+        <!-- Background Banner with Royal Lighting -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80" alt="Indra Garden Jhansi" class="w-full h-full object-cover opacity-35 scale-105 animate-pulse-slow">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0B111E] via-[#0B111E]/70 to-transparent"></div>
+            <img id="heroBgImage" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2400&q=85" alt="Royal Wedding Garden Decoration" class="w-full h-full object-cover opacity-40 scale-105 transition duration-1000">
+            <div class="absolute inset-0 bg-gradient-to-b from-royal-950/70 via-royal-950/40 to-royal-950"></div>
+            <!-- Radial Golden Glow -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-amber-600/15 rounded-full blur-[140px] pointer-events-none"></div>
         </div>
 
         <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-300 text-xs md:text-sm font-medium mb-6">
-                <i class="fa-solid fa-map-pin text-gold-400"></i> उन्नाव गेट बाहर, नौगजी कुआं, झाँसी
+            <!-- Royal Badge -->
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-maroon-900/80 via-gold-500/20 to-maroon-900/80 border border-gold-400/40 text-gold-300 text-xs sm:text-sm font-semibold mb-8 shadow-xl">
+                <i class="fa-solid fa-sparkles text-gold-400"></i> झाँसी की सबसे भव्य एवं शाही शादी का डेस्टिनेशन
             </div>
-            
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-heading text-white tracking-wide leading-tight mb-6">
-                इन्द्रा गार्डन & बैंक्वेट <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-400 to-amber-200">
-                    झाँसी का भरोसेमंद विवाह स्थल
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold font-heading text-white tracking-wide leading-tight sm:leading-none mb-6">
+                जहाँ हर फेरा बनता है <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-400 to-amber-200">
+                    एक अमर शाही दास्तान
                 </span>
             </h1>
 
             <p class="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-                शादी, रिसेप्शन, सगाई, बर्थडे पार्टी और हर पारिवारिक मांगलिक कार्यक्रम के लिए खुला हरा-भरा लॉन, भव्य स्टेज और सम्पूर्ण सुविधाओं से सुसज्जित परिसर।
+                <strong class="text-gold-300 font-medium">इन्द्रा गार्डन (Indra Garden), झाँसी</strong> — उन्नाव गेट बाहर, नौगजी कुआं रोड पर स्थित विशाल हरा-भरा लॉन, भव्य जयमाला स्टेज और सम्पूर्ण व्यवस्थाएं।
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-royal-900 font-bold text-base shadow-xl shadow-gold-500/30 transition transform hover:-translate-y-1">
-                    <i class="fa-solid fa-paper-plane mr-2"></i> उपलब्धता (Availability) जांचें
+                <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 via-amber-500 to-gold-600 hover:from-gold-400 hover:to-amber-400 text-royal-950 font-bold text-base shadow-2xl shadow-gold-500/30 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calculator text-lg"></i> शादी बजट कैलकुलेट करें
                 </a>
-                <a href="https://wa.me/919876543210?text=Namaste!%20Mujhe%20Indra%20Garden%20Jhansi%20booking%20ke%20liye%20jankari%20chahiye." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-base shadow-xl shadow-emerald-600/30 transition flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp पर बात करें
+                <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-full bg-royal-900/90 hover:bg-royal-800 border-2 border-gold-400/60 text-gold-300 font-bold text-base shadow-xl transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-calendar-check text-lg"></i> तारीख की बुकिंग देखें
                 </a>
             </div>
 
-            <!-- Quick Stats Row -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-10 border-t border-slate-800">
-                <div class="p-4 rounded-xl bg-royal-800/40 border border-slate-800">
-                    <div class="text-3xl font-bold text-gold-400 font-heading">1500+</div>
-                    <div class="text-xs text-slate-400 mt-1">गेस्ट क्षमता (Capacity)</div>
+            <!-- Stats Bar with Royal Frame -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-16 pt-8 border-t border-gold-500/20">
+                <div class="p-5 rounded-2xl bg-royal-900/70 border border-gold-500/20 backdrop-blur-md">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-gold-400 font-heading">2000+</div>
+                    <div class="text-xs text-slate-300 mt-1 uppercase tracking-wider">मेहमान क्षमता (Capacity)</div>
                 </div>
-                <div class="p-4 rounded-xl bg-royal-800/40 border border-slate-800">
-                    <div class="text-3xl font-bold text-gold-400 font-heading">विशाल लॉन</div>
-                    <div class="text-xs text-slate-400 mt-1">खुला हरा-भरा स्पेस</div>
+                <div class="p-5 rounded-2xl bg-royal-900/70 border border-gold-500/20 backdrop-blur-md">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-gold-400 font-heading">45,000</div>
+                    <div class="text-xs text-slate-300 mt-1 uppercase tracking-wider">sq.ft हरा मखमली लॉन</div>
                 </div>
-                <div class="p-4 rounded-xl bg-royal-800/40 border border-slate-800">
-                    <div class="text-3xl font-bold text-gold-400 font-heading">पार्किंग</div>
-                    <div class="text-xs text-slate-400 mt-1">सुगम एवं सुरक्षित पार्किंग</div>
+                <div class="p-5 rounded-2xl bg-royal-900/70 border border-gold-500/20 backdrop-blur-md">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-gold-400 font-heading">100%</div>
+                    <div class="text-xs text-slate-300 mt-1 uppercase tracking-wider">पावर बैकअप (24x7)</div>
                 </div>
-                <div class="p-4 rounded-xl bg-royal-800/40 border border-slate-800">
-                    <div class="text-3xl font-bold text-gold-400 font-heading">सुसज्जित रूम्स</div>
-                    <div class="text-xs text-slate-400 mt-1">दुल्हन & दूल्हा कक्ष</div>
+                <div class="p-5 rounded-2xl bg-royal-900/70 border border-gold-500/20 backdrop-blur-md">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-gold-400 font-heading">15+ वर्ष</div>
+                    <div class="text-xs text-slate-300 mt-1 uppercase tracking-wider">झाँसी का भरोसेमंद वेन्यू</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-royal-800/50 relative border-t border-b border-slate-800">
+    <!-- NEW INTERACTIVE FEATURE 1: Day vs Night Experience Switcher -->
+    <section id="experience" class="py-20 bg-royal-900/60 border-t border-b border-gold-500/20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="relative">
-                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-gold-500/30">
-                        <img src="https://images.unsplash.com/photo-1545232979-fbf6711a8470?auto=format&fit=crop&w=1200&q=80" alt="Indra Garden Lighting" class="w-full h-[450px] object-cover hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 z-20 hidden sm:block bg-gradient-to-br from-royal-900 to-royal-800 p-6 rounded-2xl border border-gold-500/40 shadow-xl max-w-xs">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-map-location-dot text-4xl text-gold-400"></i>
-                            <div>
-                                <h4 class="font-bold text-white text-base">उन्नाव गेट बाहर</h4>
-                                <p class="text-xs text-slate-400">नौगजी कुआं, झाँसी में सबसे सुविधाजनक लोकेशन</p>
-                            </div>
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">इंटरएक्टिव 360° एक्सपीरियंस</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-1">दिन का खुला माहौल vs रात की जादुई रोशनी</h2>
+                <p class="text-slate-300 text-sm mt-2">नीचे दिए गए बटन दबाकर देखें कि इन्द्रा गार्डन दिन और रात में कैसा दिखता है!</p>
+
+                <!-- Day / Night Toggle Buttons -->
+                <div class="inline-flex p-1.5 rounded-full bg-royal-950 border border-gold-500/40 mt-6 shadow-inner">
+                    <button id="showNightBtn" class="px-6 py-2.5 rounded-full text-xs font-bold bg-gradient-to-r from-gold-500 to-amber-600 text-royal-950 shadow-md transition flex items-center gap-2">
+                        <i class="fa-solid fa-moon text-indigo-950"></i> रात का नज़ारा (Night Lighting)
+                    </button>
+                    <button id="showDayBtn" class="px-6 py-2.5 rounded-full text-xs font-bold text-slate-300 hover:text-white transition flex items-center gap-2">
+                        <i class="fa-solid fa-sun text-amber-400"></i> दिन का नज़ारा (Day Lush Green)
+                    </button>
+                </div>
+            </div>
+
+            <!-- View Frame -->
+            <div class="relative rounded-3xl overflow-hidden border-2 border-gold-500/30 shadow-2xl h-[480px]">
+                <!-- Night View Image -->
+                <div id="nightViewBox" class="absolute inset-0 transition-opacity duration-700">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80" alt="Night View Indra Garden" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-transparent to-transparent flex items-end p-8">
+                        <div class="bg-royal-950/80 backdrop-blur-md p-6 rounded-2xl border border-gold-500/30 max-w-md">
+                            <span class="text-gold-400 text-xs font-bold uppercase"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> नाइट मैजिक</span>
+                            <h3 class="text-xl font-bold text-white mt-1">शाही लाइटिंग, स्टेज और कोल्ड पायरोज़</h3>
+                            <p class="text-slate-300 text-xs mt-2">शाम होते ही इन्द्रा गार्डन सुनहरी परियों के महल जैसा जगमगा उठता है। जयमाला के लिए खास लेजर और आतिशबाजी व्यवस्था।</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="space-y-6">
-                    <div class="inline-block text-gold-400 text-sm font-semibold tracking-wider uppercase">
-                        <i class="fa-solid fa-gem mr-1"></i> इन्द्रा गार्डन का परिचय
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white leading-tight">
-                        उन्नाव गेट बाहर, झाँसी में <br>
-                        <span class="text-gold-400">आपके उत्सव का उत्तम स्थल</span>
-                    </h2>
-                    <p class="text-slate-300 leading-relaxed">
-                        <strong>इन्द्रा गार्डन (Indra Garden)</strong> झाँसी के उन्नाव गेट बाहर, नौगजी कुआं रोड पर स्थित एक प्रतिष्ठित और सुगम्य विवाह एवं पार्टी स्थल है। यहाँ आपके परिवार के सभी मांगलिक कार्यक्रम जैसे शादी, रिसेप्शन, सगाई, बर्थडे और धार्मिक आयोजनों को सुव्यवस्थित तरीके से आयोजित करने के लिए पर्याप्त खुला स्थान और जरूरी सुविधाएं मौजूद हैं।
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
-                            <span class="text-slate-300">शानदार ओपन-एयर लॉन और भोजन (डाइनिंग) के लिए कवर्ड स्पेस।</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
-                            <span class="text-slate-300">जयमाला स्टेज, सुंदर प्रवेश द्वार और आकर्षक लाइटिंग व्यवस्था।</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
-                            <span class="text-slate-300">झाँसी शहर के अंदर मुख्य मार्ग से आसान आवागमन और पार्किंग।</span>
-                        </li>
-                    </ul>
-                    <div class="pt-4">
-                        <a href="#contact" class="inline-flex items-center gap-2 text-gold-400 font-semibold hover:text-gold-300 transition group">
-                            वेन्यू देखने आएं (Google Map लोकेशन देखें) <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
-                        </a>
+                <!-- Day View Image -->
+                <div id="dayViewBox" class="absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-700">
+                    <img src="https://images.unsplash.com/photo-1545232979-fbf6711a8470?auto=format&fit=crop&w=1600&q=80" alt="Day View Indra Garden" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-transparent to-transparent flex items-end p-8">
+                        <div class="bg-royal-950/80 backdrop-blur-md p-6 rounded-2xl border border-gold-500/30 max-w-md">
+                            <span class="text-emerald-400 text-xs font-bold uppercase"><i class="fa-solid fa-leaf mr-1"></i> दिन की ताजगी</span>
+                            <h3 class="text-xl font-bold text-white mt-1">हरा-भरा प्राकृतिक लॉन और धूप छांव</h3>
+                            <p class="text-slate-300 text-xs mt-2">तिलक, हल्दी, मेहंदी और दिन के रिसेप्शन के लिए ताजी हवा और खुले वातावरण का सुकून भरा संगम।</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Amenities / Facilities Section -->
-    <section id="amenities" class="py-24 bg-[#0B111E]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-gold-400 font-semibold text-sm uppercase tracking-wider">हमारी मुख्य सुविधाएं</span>
-                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-2">इन्द्रा गार्डन की व्यवस्थाएं</h2>
+    <!-- NEW INTERACTIVE FEATURE 2: Wedding Budget Estimator (कैलकुलेटर) -->
+    <section id="calculator" class="py-24 bg-royal-950 relative overflow-hidden">
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-gold-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">स्मार्ट बजटिंग टूल</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-1">शादी का अनुमानित बजट कैलकुलेट करें</h2>
+                <p class="text-slate-300 text-sm mt-2">अपनी जरूरत के अनुसार विकल्प चुनें और तुरंत स्क्रीन पर अनुमानित खर्च देखें!</p>
                 <div class="w-24 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Facility 1 -->
-                <div class="p-8 rounded-2xl bg-royal-800/60 border border-slate-800 hover:border-gold-500/50 transition duration-300 group hover:-translate-y-1">
-                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-royal-900 transition">
-                        <i class="fa-solid fa-tree"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">विशाल खुला लॉन</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        बड़ी संख्या में मेहमानों के स्वागत और घूमने-फिरने के लिए खुला, साफ-सुथरा और हरा-भरा लॉन एरिया।
-                    </p>
-                </div>
+            <!-- Calculator Card -->
+            <div class="bg-gradient-to-br from-royal-900 to-royal-850 rounded-3xl border-2 border-gold-500/30 p-6 sm:p-10 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Left: Sliders & Controls (7 Cols) -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Guests Slider -->
+                        <div class="p-4 rounded-2xl bg-royal-950/60 border border-slate-800">
+                            <div class="flex items-center justify-between mb-2">
+                                <label class="text-sm font-semibold text-white flex items-center gap-2">
+                                    <i class="fa-solid fa-users text-gold-400"></i> अनुमानित मेहमानों की संख्या (Guests):
+                                </label>
+                                <span id="guestDisplay" class="text-lg font-bold text-gold-400 font-heading">500 लोग</span>
+                            </div>
+                            <input type="range" id="guestSlider" min="200" max="2000" step="100" value="500" class="w-full accent-amber-500 cursor-pointer">
+                            <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                                <span>200</span>
+                                <span>500</span>
+                                <span>1000</span>
+                                <span>1500</span>
+                                <span>2000+</span>
+                            </div>
+                        </div>
 
-                <!-- Facility 2 -->
-                <div class="p-8 rounded-2xl bg-royal-800/60 border border-slate-800 hover:border-gold-500/50 transition duration-300 group hover:-translate-y-1">
-                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-royal-900 transition">
-                        <i class="fa-solid fa-utensils"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">कैटरिंग & डाइनिंग स्पेस</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        स्वादिष्ट भोजन परोसने और बुफे काउंटर लगाने के लिए चौड़ा और सुव्यवस्थित डाइनिंग एरिया।
-                    </p>
-                </div>
+                        <!-- Decoration Type -->
+                        <div class="p-4 rounded-2xl bg-royal-950/60 border border-slate-800">
+                            <label class="text-sm font-semibold text-white block mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-wand-magic text-gold-400"></i> डेकोरेशन एवं थीम चुनें:
+                            </label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <button type="button" class="decor-btn py-2.5 px-3 rounded-xl border border-slate-700 text-xs font-semibold hover:border-gold-400 transition text-center" data-val="standard">
+                                    स्टैंडर्ड
+                                </button>
+                                <button type="button" class="decor-btn active-option py-2.5 px-3 rounded-xl border border-gold-500 bg-gold-500/20 text-gold-300 text-xs font-semibold text-center" data-val="grand">
+                                    शाही / ग्रैंड
+                                </button>
+                                <button type="button" class="decor-btn py-2.5 px-3 rounded-xl border border-slate-700 text-xs font-semibold hover:border-gold-400 transition text-center" data-val="royal">
+                                    अल्ट्रा लक्ज़री
+                                </button>
+                            </div>
+                        </div>
 
-                <!-- Facility 3 -->
-                <div class="p-8 rounded-2xl bg-royal-800/60 border border-slate-800 hover:border-gold-500/50 transition duration-300 group hover:-translate-y-1">
-                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-royal-900 transition">
-                        <i class="fa-solid fa-square-parking"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">पार्किंग की व्यवस्था</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        मेहमानों की गाड़ियों (Cars & 2-Wheelers) के लिए सुरक्षित पार्किंग स्थल।
-                    </p>
-                </div>
+                        <!-- Add-ons Checkboxes -->
+                        <div class="p-4 rounded-2xl bg-royal-950/60 border border-slate-800 space-y-3">
+                            <label class="text-sm font-semibold text-white block mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-plus-circle text-gold-400"></i> अतिरिक्त सुविधाएं (Add-ons):
+                            </label>
 
-                <!-- Facility 4 -->
-                <div class="p-8 rounded-2xl bg-royal-800/60 border border-slate-800 hover:border-gold-500/50 transition duration-300 group hover:-translate-y-1">
-                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-royal-900 transition">
-                        <i class="fa-solid fa-bed"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">दूल्हा-दुल्हन रूम्स</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        तैयारी और विश्राम के लिए अटैच्ड सुविधा वाले कमरे ताकि परिवार आराम से तैयार हो सके।
-                    </p>
-                </div>
+                            <label class="flex items-center justify-between text-xs text-slate-300 cursor-pointer p-2 rounded-lg hover:bg-royal-800/50">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" id="addRooms" checked class="w-4 h-4 accent-amber-500 rounded">
+                                    दुल्हन/दूल्हा AC लक्ज़री रूम्स (2 सुसज्जित कक्ष)
+                                </span>
+                                <span class="text-gold-400 font-semibold">+₹10,000</span>
+                            </label>
 
-                <!-- Facility 5 -->
-                <div class="p-8 rounded-2xl bg-royal-800/60 border border-slate-800 hover:border-gold-500/50 transition duration-300 group hover:-translate-y-1">
-                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-royal-900 transition">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">अनवरत जनरेटर बैकअप</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        कार्यक्रम के दौरान बिजली की कोई रुकावट न हो, इसके लिए उपयुक्त जनरेटर पावर बैकअप उपलब्ध।
-                    </p>
-                </div>
+                            <label class="flex items-center justify-between text-xs text-slate-300 cursor-pointer p-2 rounded-lg hover:bg-royal-800/50">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" id="addDj" checked class="w-4 h-4 accent-amber-500 rounded">
+                                    हाई-बेस डीजे एवं स्टेज लाइटिंग सेटअप
+                                </span>
+                                <span class="text-gold-400 font-semibold">+₹15,000</span>
+                            </label>
 
-                <!-- Facility 6 -->
-                <div class="p-8 rounded-2xl bg-royal-800/60 border border-slate-800 hover:border-gold-500/50 transition duration-300 group hover:-translate-y-1">
-                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-royal-900 transition">
-                        <i class="fa-solid fa-route"></i>
+                            <label class="flex items-center justify-between text-xs text-slate-300 cursor-pointer p-2 rounded-lg hover:bg-royal-800/50">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" id="addPyro" class="w-4 h-4 accent-amber-500 rounded">
+                                    कोल्ड पायरोज़ & रॉयल एंट्री स्मोक इफेक्ट्स
+                                </span>
+                                <span class="text-gold-400 font-semibold">+₹8,000</span>
+                            </label>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">सुगम कनेक्टिविटी</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        उन्नाव गेट बाहर मुख्य मार्ग पर होने के कारण झाँसी शहर के किसी भी कोने से पहुँचना बेहद आसान।
-                    </p>
+
+                    <!-- Right: Estimated Price Card (5 Cols) -->
+                    <div class="lg:col-span-5 bg-gradient-to-b from-maroon-900/90 to-royal-950 p-6 sm:p-8 rounded-3xl border-2 border-gold-500/50 text-center shadow-2xl relative">
+                        <div class="w-12 h-12 rounded-full bg-gold-500/20 text-gold-400 text-2xl flex items-center justify-center mx-auto mb-4 border border-gold-400/30">
+                            <i class="fa-solid fa-receipt"></i>
+                        </div>
+
+                        <span class="text-xs uppercase font-bold tracking-widest text-gold-400">अनुमानित वेन्यू खर्च</span>
+                        <div class="my-4">
+                            <span class="text-xs text-slate-400">लगभग (Approx.):</span>
+                            <div id="totalEstimateDisplay" class="text-4xl sm:text-5xl font-extrabold text-white font-heading mt-1">
+                                ₹1,25,000*
+                            </div>
+                            <span class="text-[11px] text-amber-300 block mt-1">(*तारीख और सीजन के अनुसार छूट संभव)</span>
+                        </div>
+
+                        <div class="text-xs text-slate-300 border-t border-slate-700/60 pt-4 mb-6 space-y-1.5 text-left">
+                            <div class="flex justify-between"><span>वेन्यू + लॉन:</span> <span class="font-semibold text-white">शामिल</span></div>
+                            <div class="flex justify-between"><span>जनरेटर बैकअप:</span> <span class="font-semibold text-white">अनलिमिटेड</span></div>
+                            <div class="flex justify-between"><span>सुरक्षा & पार्किंग:</span> <span class="font-semibold text-white">मुफ्त</span></div>
+                        </div>
+
+                        <button id="sendCalcToWhatsAppBtn" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-xl shadow-emerald-900/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> यह कोटेशन WhatsApp पर भेजें
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Events Section -->
-    <section id="events" class="py-24 bg-royal-800/40 border-t border-b border-slate-800">
+    <!-- NEW FEATURE 3: Shubh Muhurat Dates (शुभ विवाह मुहूर्त 2026-2027) -->
+    <section id="muhurat" class="py-20 bg-royal-900/40 border-t border-b border-gold-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-gold-400 font-semibold text-sm uppercase tracking-wider">हर उत्सव का साथी</span>
-                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-2">इन्द्रा गार्डन में आयोजित होने वाले कार्यक्रम</h2>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">ज्योतिष गणना अनुसार</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-1">2026-2027 शुभ विवाह मुहूर्त (सावे)</h2>
+                <p class="text-slate-300 text-sm mt-2">इन शुभ तिथियों पर गार्डन की मांग सबसे ज्यादा रहती है। अपनी तारीख अभी सुरक्षित करें!</p>
                 <div class="w-24 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Event 1 -->
-                <div class="relative group rounded-2xl overflow-hidden border border-slate-800">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Wedding in Jhansi" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-royal-900 via-royal-900/40 to-transparent flex flex-col justify-end p-6">
-                        <h4 class="text-xl font-bold text-white font-heading">शुभ विवाह & रिसेप्शन</h4>
-                        <p class="text-xs text-gold-300 mt-1">मंडप, जयमाला स्टेज, बारात स्वागत</p>
+                <!-- Month 1: Nov-Dec -->
+                <div class="p-6 rounded-2xl bg-royal-950/80 border border-gold-500/30 hover:border-gold-400 transition">
+                    <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+                        <h4 class="font-bold text-gold-300 font-heading">नवंबर - दिसंबर 2026</h4>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">बुकिंग खुली है</span>
                     </div>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center justify-between"><span>18, 22, 23, 27 नवंबर</span> <i class="fa-solid fa-check text-gold-400"></i></li>
+                        <li class="flex items-center justify-between"><span>2, 4, 9, 11 दिसंबर</span> <i class="fa-solid fa-check text-gold-400"></i></li>
+                        <li class="flex items-center justify-between text-amber-300 font-semibold"><span>14 दिसंबर (विशेष सावा)</span> <i class="fa-solid fa-star text-gold-400"></i></li>
+                    </ul>
                 </div>
 
-                <!-- Event 2 -->
-                <div class="relative group rounded-2xl overflow-hidden border border-slate-800">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Engagement & Ring Ceremony" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-royal-900 via-royal-900/40 to-transparent flex flex-col justify-end p-6">
-                        <h4 class="text-xl font-bold text-white font-heading">सगाई & तिलक समारोह</h4>
-                        <p class="text-xs text-gold-300 mt-1">रिंग सेरेमनी, संगीत और पारिवारिक मिलन</p>
+                <!-- Month 2: Jan-Feb -->
+                <div class="p-6 rounded-2xl bg-royal-950/80 border border-gold-500/30 hover:border-gold-400 transition">
+                    <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+                        <h4 class="font-bold text-gold-300 font-heading">जनवरी - फरवरी 2027</h4>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">बुकिंग खुली है</span>
                     </div>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center justify-between"><span>17, 21, 23, 29 जनवरी</span> <i class="fa-solid fa-check text-gold-400"></i></li>
+                        <li class="flex items-center justify-between"><span>5, 12, 16, 19 फरवरी</span> <i class="fa-solid fa-check text-gold-400"></i></li>
+                        <li class="flex items-center justify-between text-amber-300 font-semibold"><span>24 फरवरी (महा सावा)</span> <i class="fa-solid fa-star text-gold-400"></i></li>
+                    </ul>
                 </div>
 
-                <!-- Event 3 -->
-                <div class="relative group rounded-2xl overflow-hidden border border-slate-800">
-                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Birthday Party Jhansi" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-royal-900 via-royal-900/40 to-transparent flex flex-col justify-end p-6">
-                        <h4 class="text-xl font-bold text-white font-heading">बर्थडे पार्टीज़</h4>
-                        <p class="text-xs text-gold-300 mt-1">थीम डेकोरेशन, म्यूज़िक, मस्ती भरा माहौल</p>
+                <!-- Month 3: April-May -->
+                <div class="p-6 rounded-2xl bg-royal-950/80 border border-gold-500/30 hover:border-gold-400 transition">
+                    <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+                        <h4 class="font-bold text-gold-300 font-heading">अप्रैल - मई 2027</h4>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold">तेज़ी से भर रहा</span>
                     </div>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center justify-between"><span>18, 20, 25, 29 अप्रैल</span> <i class="fa-solid fa-check text-gold-400"></i></li>
+                        <li class="flex items-center justify-between"><span>2, 6, 10, 16 मई</span> <i class="fa-solid fa-check text-gold-400"></i></li>
+                        <li class="flex items-center justify-between text-amber-300 font-semibold"><span>21 मई (अक्षय तृतीया स्पेशल)</span> <i class="fa-solid fa-star text-gold-400"></i></li>
+                    </ul>
                 </div>
 
-                <!-- Event 4 -->
-                <div class="relative group rounded-2xl overflow-hidden border border-slate-800">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Anniversary & Social Events" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-royal-900 via-royal-900/40 to-transparent flex flex-col justify-end p-6">
-                        <h4 class="text-xl font-bold text-white font-heading">एनिवर्सरी & धार्मिक उत्सव</h4>
-                        <p class="text-xs text-gold-300 mt-1">माता की चौकी, सुंदरकांड, सामाजिक सम्मेलन</p>
+                <!-- Month 4: June-July -->
+                <div class="p-6 rounded-2xl bg-royal-950/80 border border-gold-500/30 hover:border-gold-400 transition">
+                    <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+                        <h4 class="font-bold text-gold-300 font-heading">जून - जुलाई 2027</h4>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">बुकिंग खुली है</span>
                     </div>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center justify-between"><span>3, 7, 11, 18 जून</span> <i class="fa-solid fa-check text-gold-400"></i></li>
+                        <li class="flex items-center justify-between"><span>24, 28 जून</span> <i class="fa-solid fa-check text-gold-400"></i></li>
+                        <li class="flex items-center justify-between text-amber-300 font-semibold"><span>1, 5 जुलाई (चातुर्मास पूर्व)</span> <i class="fa-solid fa-star text-gold-400"></i></li>
+                    </ul>
                 </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="#booking" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold-500/20 hover:bg-gold-500 text-gold-300 hover:text-royal-950 border border-gold-400/40 text-xs font-bold uppercase tracking-wider transition">
+                    <i class="fa-regular fa-clock"></i> अपनी शुभ तारीख के लिए इन्द्रा गार्डन रिजर्व करें
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Photo Gallery -->
-    <section id="gallery" class="py-24 bg-[#0B111E]">
+    <!-- Photo Gallery & Reels Highlights -->
+    <section id="gallery" class="py-24 bg-royal-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-gold-400 font-semibold text-sm uppercase tracking-wider">फोटो गैलरी</span>
-                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-2">सजावट और दृश्य झलकियाँ</h2>
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">शाही यादें</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-1">इन्द्रा गार्डन की भव्य सजावट</h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
             </div>
 
-            <!-- Gallery Filter Buttons -->
+            <!-- Filter Tabs -->
             <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-gold-500 text-royal-900 transition" data-filter="all">सभी (All)</button>
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-royal-800 text-slate-300 hover:text-white transition" data-filter="mandap">मंडप व स्टेज</button>
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-royal-800 text-slate-300 hover:text-white transition" data-filter="dining">डाइनिंग व कैटरिंग</button>
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-royal-800 text-slate-300 hover:text-white transition" data-filter="night">नाइट लाइटिंग</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-gold-500 text-royal-950 shadow-md" data-filter="all">सभी दृश्य (All)</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-royal-850 text-slate-300 hover:text-white" data-filter="mandap">वरमाला & मंडप</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-royal-850 text-slate-300 hover:text-white" data-filter="dining">शाही बुफे & डाइनिंग</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-royal-850 text-slate-300 hover:text-white" data-filter="night">नाइट लाइटिंग</button>
             </div>
 
-            <!-- Gallery Grid -->
+            <!-- Grid Items with Overlay -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="gallery-item group rounded-xl overflow-hidden border border-slate-800 relative cursor-pointer" data-category="mandap">
-                    <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80" alt="Mandap Stage" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-royal-900/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-3xl"></i>
+                <div class="gallery-item group rounded-2xl overflow-hidden border border-gold-500/20 relative cursor-pointer" data-category="mandap">
+                    <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80" alt="Mandap Stage" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-royal-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold-400 text-xs font-bold uppercase">शाही जयमाला स्टेज</span>
+                            <h4 class="text-white font-bold text-base">राजस्थानी थीम डेकोरेशन</h4>
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item group rounded-xl overflow-hidden border border-slate-800 relative cursor-pointer" data-category="dining">
-                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80" alt="Dining Setup" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-royal-900/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-3xl"></i>
+                <div class="gallery-item group rounded-2xl overflow-hidden border border-gold-500/20 relative cursor-pointer" data-category="dining">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80" alt="Dining Setup" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-royal-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold-400 text-xs font-bold uppercase">बुफे एवं कैटरिंग</span>
+                            <h4 class="text-white font-bold text-base">विशाल एवं कवर्ड डाइनिंग स्पेस</h4>
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item group rounded-xl overflow-hidden border border-slate-800 relative cursor-pointer" data-category="night">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Night Lighting" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-royal-900/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-3xl"></i>
+                <div class="gallery-item group rounded-2xl overflow-hidden border border-gold-500/20 relative cursor-pointer" data-category="night">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Night Lighting" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-royal-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold-400 text-xs font-bold uppercase">नाइट लाइटिंग</span>
+                            <h4 class="text-white font-bold text-base">फेरी लाइट्स एवं लेज़र शो</h4>
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item group rounded-xl overflow-hidden border border-slate-800 relative cursor-pointer" data-category="mandap">
-                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Floral Decoration" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-royal-900/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-3xl"></i>
+                <div class="gallery-item group rounded-2xl overflow-hidden border border-gold-500/20 relative cursor-pointer" data-category="mandap">
+                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Floral Entrance" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-royal-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold-400 text-xs font-bold uppercase">प्रवेश द्वार</span>
+                            <h4 class="text-white font-bold text-base">शाही फूलों का भव्य प्रवेश द्वार</h4>
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item group rounded-xl overflow-hidden border border-slate-800 relative cursor-pointer" data-category="night">
-                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Lawn Entry Gate" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-royal-900/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-3xl"></i>
+                <div class="gallery-item group rounded-2xl overflow-hidden border border-gold-500/20 relative cursor-pointer" data-category="night">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Lawn Entry Gate" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-royal-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold-400 text-xs font-bold uppercase">बारात स्वागत</span>
+                            <h4 class="text-white font-bold text-base">चौड़ी एवं सुरक्षित एंट्री रोड</h4>
+                        </div>
                     </div>
                 </div>
 
-                <div class="gallery-item group rounded-xl overflow-hidden border border-slate-800 relative cursor-pointer" data-category="dining">
-                    <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=800&q=80" alt="Buffet Arrangement" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-royal-900/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-3xl"></i>
+                <div class="gallery-item group rounded-2xl overflow-hidden border border-gold-500/20 relative cursor-pointer" data-category="dining">
+                    <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=800&q=80" alt="Cocktail Lounge" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-royal-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-gold-400 text-xs font-bold uppercase">सिटिंग एरिया</span>
+                            <h4 class="text-white font-bold text-base">आरामदायक सोफा एवं राउंड टेबल</h4>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Packages / Pricing Section -->
-    <section id="packages" class="py-24 bg-royal-800/40 border-t border-b border-slate-800">
+    <!-- Facilities Section -->
+    <section id="amenities" class="py-24 bg-royal-900/50 border-t border-b border-gold-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-gold-400 font-semibold text-sm uppercase tracking-wider">किफायती व उत्तम</span>
-                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-2">बुकिंग पैकेजेस (झाँसी)</h2>
-                <p class="text-slate-400 text-sm mt-3">अपनी आवश्यकता और बजट के अनुसार तारीख और पैकेज का चयन करें।</p>
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">सम्पूर्ण व्यवस्था</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-1">इन्द्रा गार्डन की शाही सुविधाएं</h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mt-4"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-                <!-- Package 1: Basic / Party -->
-                <div class="rounded-3xl p-8 bg-royal-800 border border-slate-800 flex flex-col justify-between hover:border-gold-500/40 transition">
-                    <div>
-                        <div class="text-xs uppercase font-bold tracking-widest text-gold-400 mb-2">पार्टी पैकेज</div>
-                        <h3 class="text-2xl font-bold text-white mb-2">बर्थडे & सगाई</h3>
-                        <p class="text-slate-400 text-xs mb-6">छोटे व मध्यम पारिवारिक आयोजनों के लिए</p>
-                        
-                        <div class="text-3xl font-extrabold text-gold-400 mb-6">
-                            किफायती दर <span class="text-xs text-slate-400 font-normal">/ चर्चा योग्य</span>
-                        </div>
-
-                        <ul class="space-y-3 text-sm text-slate-300 border-t border-slate-700/60 pt-6">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> लॉन व सिटिंग स्पेस</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> स्टेज व बेसिक लाइटिंग</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> साउंड सिस्टम सुविधा</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> चेंजिंग रूम उपलब्ध</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> पावर बैकअप</li>
-                        </ul>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-royal-950 border border-gold-500/30 hover:border-gold-400 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 text-2xl flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-royal-950 transition">
+                        <i class="fa-solid fa-tree"></i>
                     </div>
-                    <div class="mt-8">
-                        <a href="#booking" class="block text-center py-3 rounded-xl border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-royal-900 font-semibold transition text-sm">
-                            पूछताछ करें
-                        </a>
-                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-heading">45,000 sq.ft खुला लॉन</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">2000+ मेहमानों की भव्य शादी के लिए प्राकृतिक हरा-भरा मखमली लॉन जहाँ मेहमान सुकून से घूम सकें।</p>
                 </div>
 
-                <!-- Package 2: Royal Wedding (Popular) -->
-                <div class="rounded-3xl p-8 bg-gradient-to-b from-royal-800 to-royal-900 border-2 border-gold-500 flex flex-col justify-between relative shadow-2xl shadow-gold-500/10 scale-105 z-10">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-gold-500 to-amber-600 text-royal-900 text-xs font-bold uppercase tracking-wider">
-                        ★ लोकप्रिय शादी पैकेज
+                <div class="p-8 rounded-3xl bg-royal-950 border border-gold-500/30 hover:border-gold-400 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 text-2xl flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-royal-950 transition">
+                        <i class="fa-solid fa-square-parking"></i>
                     </div>
-
-                    <div>
-                        <div class="text-xs uppercase font-bold tracking-widest text-gold-400 mb-2 mt-2">वेडिंग स्पेशल</div>
-                        <h3 class="text-2xl font-bold text-white mb-2">सम्पूर्ण विवाह समारोह</h3>
-                        <p class="text-slate-400 text-xs mb-6">शादी, बारात स्वागत और रिसेप्शन के लिए</p>
-                        
-                        <div class="text-3xl font-extrabold text-gold-400 mb-6">
-                            बेस्ट रेट गारंटी <span class="text-xs text-slate-400 font-normal">/ 24 घंटे</span>
-                        </div>
-
-                        <ul class="space-y-3 text-sm text-slate-300 border-t border-slate-700/60 pt-6">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> पूरा खुला हरा लॉन + कवर्ड एरिया</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> भव्य वरमाला स्टेज + मंडप डेकोरेशन</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> दूल्हा-दुल्हन एवं फैमिली रूम्स</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> मेन गेट डेकोरेशन & नाइट लाइटिंग</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> 100% अनवरत जनरेटर बैकअप</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> सुरक्षित पार्किंग स्पेस</li>
-                        </ul>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#booking" class="block text-center py-3.5 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-royal-900 font-bold transition text-sm shadow-lg shadow-gold-500/20">
-                            तारीख बुक करें
-                        </a>
-                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-heading">विशाल सुरक्षित पार्किंग</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">गाड़ियों और बाइकों के लिए समर्पित पार्किंग स्थल जिससे उन्नाव गेट रोड पर कोई ट्रैफिक जाम न लगे।</p>
                 </div>
 
-                <!-- Package 3: Platinum Grand Wedding -->
-                <div class="rounded-3xl p-8 bg-royal-800 border border-slate-800 flex flex-col justify-between hover:border-gold-500/40 transition">
-                    <div>
-                        <div class="text-xs uppercase font-bold tracking-widest text-gold-400 mb-2">कस्टम पैकेज</div>
-                        <h3 class="text-2xl font-bold text-white mb-2">अपनी पसंद अनुसार</h3>
-                        <p class="text-slate-400 text-xs mb-6">अपनी आवश्यकता के अनुसार सजावट और सुविधाएं तय करें</p>
-                        
-                        <div class="text-3xl font-extrabold text-gold-400 mb-6">
-                            कस्टम कोटेशन <span class="text-xs text-slate-400 font-normal">/ आवश्यकतानुसार</span>
-                        </div>
+                <div class="p-8 rounded-3xl bg-royal-950 border border-gold-500/30 hover:border-gold-400 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 text-2xl flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-royal-950 transition">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-heading">100% अनवरत पावर बैकअप</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">हैवी ड्यूटी साइलेंट जनरेटर के साथ 24 घंटे लगातार बिजली सप्लाई ताकि आपके फेरे और जयमाला में कोई व्यवधान न हो।</p>
+                </div>
 
-                        <ul class="space-y-3 text-sm text-slate-300 border-t border-slate-700/60 pt-6">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> सम्पूर्ण परिसर आरक्षण</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> कस्टमाइज्ड स्टेज एवं थीम लाइटिंग</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> कैटरिंग स्पेस एवं सभी जरूरी सुविधाएं</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> वेन्यू मैनेजर का पूरा सहयोग</li>
-                        </ul>
+                <div class="p-8 rounded-3xl bg-royal-950 border border-gold-500/30 hover:border-gold-400 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 text-2xl flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-royal-950 transition">
+                        <i class="fa-solid fa-bed"></i>
                     </div>
-                    <div class="mt-8">
-                        <a href="#booking" class="block text-center py-3 rounded-xl border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-royal-900 font-semibold transition text-sm">
-                            कोटेशन प्राप्त करें
-                        </a>
+                    <h3 class="text-xl font-bold text-white mb-2 font-heading">दुल्हन & दूल्हा कक्ष</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">अटैच्ड बाथरूम, फुल-लेंथ मिरर, और ड्रेसिंग सुविधाओं से सुसज्जित वातानुकूलित कमरे।</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-royal-950 border border-gold-500/30 hover:border-gold-400 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 text-2xl flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-royal-950 transition">
+                        <i class="fa-solid fa-utensils"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-heading">कवर्ड डाइनिंग हॉल</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">मौसम की चिंता किए बिना स्वादिष्ट बुफे परोसने के लिए अलग, साफ और व्यवस्थित डाइनिंग हॉल।</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-royal-950 border border-gold-500/30 hover:border-gold-400 transition group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 text-2xl flex items-center justify-center mb-6 group-hover:bg-gold-500 group-hover:text-royal-950 transition">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-heading">CCTV & सुरक्षा गार्ड्स</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">पूरे कैंपस में 24 घंटे सीसीटीवी कैमरों से निगरानी और प्रशिक्षित सुरक्षा कर्मियों की तैनाती।</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Booking Enquiry Section (Interactive with WhatsApp) -->
-    <section id="booking" class="py-24 bg-[#0B111E] relative">
+    <!-- Direct WhatsApp Booking Form -->
+    <section id="booking" class="py-24 bg-royal-950 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-royal-800 to-royal-900 border border-gold-500/40 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-                <div class="absolute -top-24 -right-24 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
+            <div class="bg-gradient-to-br from-maroon-900/60 via-royal-900 to-royal-950 border-2 border-gold-500/40 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
                 <div class="text-center mb-10">
-                    <span class="text-gold-400 text-xs uppercase font-bold tracking-widest">इन्द्रा गार्डन झाँसी</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-1">तारीख की उपलब्धता (Check Availability)</h2>
-                    <p class="text-slate-400 text-sm mt-2">फॉर्म भरें और तुरंत व्हाट्सएप पर तारीख और रेट की जानकारी प्राप्त करें।</p>
+                    <span class="text-gold-400 text-xs uppercase font-bold tracking-widest">सीधी बातचीत</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-1">इन्द्रा गार्डन झाँसी में तारीख बुक करें</h2>
+                    <p class="text-slate-300 text-sm mt-2">फॉर्म भरें और सीधे WhatsApp पर तारीख और डिस्काउंट की जानकारी प्राप्त करें।</p>
                 </div>
 
                 <form id="bookingForm" class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">आपका पूरा नाम *</label>
-                            <input type="text" id="custName" required placeholder="उदा. दीपक राजपूत" class="w-full px-4 py-3 rounded-xl bg-royal-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 transition">
+                            <input type="text" id="custName" required placeholder="उदा. दीपक राजपूत" class="w-full px-4 py-3.5 rounded-xl bg-royal-950/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 transition">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">मोबाइल नंबर *</label>
-                            <input type="tel" id="custPhone" required placeholder="उदा. 9876543210" class="w-full px-4 py-3 rounded-xl bg-royal-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 transition">
+                            <input type="tel" id="custPhone" required placeholder="उदा. 9876543210" class="w-full px-4 py-3.5 rounded-xl bg-royal-950/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 transition">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">इवेंट की तारीख *</label>
-                            <input type="date" id="eventDate" required class="w-full px-4 py-3 rounded-xl bg-royal-900/80 border border-slate-700 text-white focus:outline-none focus:border-gold-500 transition">
+                            <input type="date" id="eventDate" required class="w-full px-4 py-3.5 rounded-xl bg-royal-950/80 border border-slate-700 text-white focus:outline-none focus:border-gold-500 transition">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">इवेंट का प्रकार *</label>
-                            <select id="eventType" class="w-full px-4 py-3 rounded-xl bg-royal-900/80 border border-slate-700 text-white focus:outline-none focus:border-gold-500 transition">
-                                <option value="शादी (Wedding)">शादी (Wedding)</option>
+                            <select id="eventType" class="w-full px-4 py-3.5 rounded-xl bg-royal-950/80 border border-slate-700 text-white focus:outline-none focus:border-gold-500 transition">
+                                <option value="शुभ विवाह (Wedding)">शुभ विवाह (Wedding)</option>
                                 <option value="रिसेप्शन (Reception)">रिसेप्शन (Reception)</option>
                                 <option value="सगाई / तिलक (Engagement)">सगाई / तिलक</option>
-                                <option value="बर्थडे पार्टी (Birthday Party)">बर्थडे पार्टी</option>
-                                <option value="अन्य पारिवारिक कार्यक्रम (Other)">अन्य कोई उत्सव</option>
+                                <option value="बर्थडे पार्टी (Birthday)">बर्थडे पार्टी</option>
+                                <option value="अन्य पारिवारिक उत्सव">अन्य पारिवारिक उत्सव</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">मेहमानों की संख्या (Guests)</label>
-                            <select id="guestCount" class="w-full px-4 py-3 rounded-xl bg-royal-900/80 border border-slate-700 text-white focus:outline-none focus:border-gold-500 transition">
-                                <option value="100 - 300 लोग">100 - 300 लोग</option>
-                                <option value="300 - 600 लोग">300 - 600 लोग</option>
-                                <option value="600 - 1000 लोग">600 - 1000 लोग</option>
-                                <option value="1000+ लोग">1000 से अधिक लोग</option>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">मेहमानों की संख्या</label>
+                            <select id="guestCount" class="w-full px-4 py-3.5 rounded-xl bg-royal-950/80 border border-slate-700 text-white focus:outline-none focus:border-gold-500 transition">
+                                <option value="300 - 500 लोग">300 - 500 लोग</option>
+                                <option value="500 - 800 लोग">500 - 800 लोग</option>
+                                <option value="800 - 1200 लोग">800 - 1200 लोग</option>
+                                <option value="1200 से अधिक लोग">1200 से अधिक लोग</option>
                             </select>
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">कोई विशेष संदेश या सवाल</label>
-                        <textarea id="custMessage" rows="3" placeholder="उदा. हमें इस तारीख के लिए गार्डन का किराया और उपलब्धता जाननी है..." class="w-full px-4 py-3 rounded-xl bg-royal-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 transition"></textarea>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">कोई विशेष सवाल या आवश्यकता</label>
+                        <textarea id="custMessage" rows="3" placeholder="उदा. हमें इस तारीख के लिए गार्डन का किराया और उपलब्धता जाननी है..." class="w-full px-4 py-3 rounded-xl bg-royal-950/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 transition"></textarea>
                     </div>
 
-                    <div class="pt-2">
-                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-500 via-amber-500 to-gold-600 hover:from-gold-400 hover:to-amber-500 text-royal-900 font-bold text-lg shadow-xl shadow-gold-500/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-2xl text-emerald-950"></i> WhatsApp पर डायरेक्ट मैसेज भेजें
-                        </button>
-                        <p class="text-center text-xs text-slate-400 mt-3">क्लिक करते ही यह जानकारी आपके व्हाट्सएप से सीधे इन्द्रा गार्डन मैनेजमेंट को भेज दी जाएगी।</p>
-                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-500 via-amber-500 to-gold-600 hover:from-gold-400 hover:to-amber-500 text-royal-950 font-bold text-lg shadow-xl shadow-gold-500/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-2xl text-emerald-950"></i> WhatsApp पर सीधी पूछताछ भेजें
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Map Section -->
-    <section id="contact" class="py-24 bg-[#0B111E] border-t border-slate-800">
+    <!-- Live Google Map & Contact -->
+    <section id="contact" class="py-24 bg-royal-950 border-t border-gold-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Info -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
                     <div>
-                        <span class="text-gold-400 font-semibold text-sm uppercase tracking-wider">लोकेशन & संपर्क</span>
-                        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-2">इन्द्रा गार्डन, झाँसी</h2>
-                        <p class="text-slate-400 text-sm mt-3">आप कभी भी आकर गार्डन का निरीक्षण कर सकते हैं। वेन्यू विजिट के लिए हमें कॉल करें।</p>
+                        <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">आसान पहुंच</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white mt-1">इन्द्रा गार्डन, झाँसी पधारें</h2>
+                        <p class="text-slate-300 text-sm mt-2">आप कभी भी आकर गार्डन का मुआयना कर सकते हैं। वेन्यू विज़िट के लिए हमें कॉल करें।</p>
                     </div>
 
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl shrink-0">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-solid fa-map-location-dot"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white">पता (Full Address)</h4>
-                                <p class="text-slate-300 text-sm mt-1 font-medium">इन्द्रा गार्डन (Indra Garden)</p>
-                                <p class="text-slate-400 text-sm">उन्नाव गेट बाहर, नौगजी कुआं (पीतांबरा नगर रोड), झाँसी, उत्तर प्रदेश - 284002</p>
+                                <h4 class="font-bold text-white">स्थान (Address)</h4>
+                                <p class="text-slate-300 text-sm mt-1">इन्द्रा गार्डन (Indra Garden)</p>
+                                <p class="text-slate-400 text-xs">उन्नाव गेट बाहर, नौगजी कुआं (पीतांबरा नगर रोड), झाँसी, उत्तर प्रदेश - 284002</p>
                             </div>
                         </div>
 
@@ -599,8 +657,8 @@
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white">फ़ोन नंबर (Call For Booking)</h4>
-                                <p class="text-slate-400 text-sm mt-1">
+                                <h4 class="font-bold text-white">फ़ोन नंबर (Calling)</h4>
+                                <p class="text-slate-300 text-sm mt-1">
                                     <a href="tel:+919876543210" class="hover:text-gold-400 text-white font-medium transition">+91 98765 43210</a>
                                 </p>
                             </div>
@@ -611,27 +669,17 @@
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white">व्हाट्सएप सपोर्ट</h4>
-                                <p class="text-slate-400 text-sm mt-1">
-                                    <a href="https://wa.me/919876543210" target="_blank" class="hover:text-emerald-400 text-emerald-400 font-medium transition">+91 98765 43210 (तुरंत रिप्लाई)</a>
+                                <h4 class="font-bold text-white">WhatsApp चैट</h4>
+                                <p class="text-slate-300 text-sm mt-1">
+                                    <a href="https://wa.me/919876543210?text=Namaste!%20Mujhe%20Indra%20Garden%20Jhansi%20booking%20ke%20liye%20jankari%20chahiye." target="_blank" class="text-emerald-400 font-medium hover:underline">+91 98765 43210 (24x7 ऑनलाइन)</a>
                                 </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl shrink-0">
-                                <i class="fa-solid fa-clock"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white">विज़िट का समय</h4>
-                                <p class="text-slate-400 text-sm mt-1">सुबह 8:00 बजे से रात 9:00 बजे तक (प्रतिदिन खुला)</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Google Map Embed For Indra Garden Unnao Gate Bahar Jhansi -->
-                <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl h-[400px] lg:h-auto min-h-[380px] relative">
+                <!-- Google Maps Frame -->
+                <div class="rounded-3xl overflow-hidden border-2 border-gold-500/30 shadow-2xl h-[420px]">
                     <iframe 
                         src="https://maps.google.com/maps?q=Indra+Garden+Unnao+Gate+Bahar+Jhansi+Uttar+Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         class="w-full h-full border-0 filter invert contrast-125 opacity-85 hover:filter-none hover:opacity-100 transition duration-500" 
@@ -645,11 +693,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-royal-900 border-t border-slate-800 py-12 text-sm text-slate-400">
+    <footer class="bg-royal-950 border-t border-gold-500/20 py-12 text-sm text-slate-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full border border-gold-400 flex items-center justify-center text-gold-400 text-lg">
+                    <div class="w-10 h-10 rounded-full border border-gold-400 flex items-center justify-center text-gold-400">
                         <i class="fa-solid fa-crown"></i>
                     </div>
                     <div>
@@ -657,18 +705,12 @@
                         <span class="text-xs text-slate-500">उन्नाव गेट बाहर, नौगजी कुआं, झाँसी</span>
                     </div>
                 </div>
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-6 text-xs sm:text-sm">
                     <a href="#home" class="hover:text-gold-400 transition">होम</a>
-                    <a href="#amenities" class="hover:text-gold-400 transition">सुविधाएँ</a>
-                    <a href="#events" class="hover:text-gold-400 transition">इवेंट्स</a>
-                    <a href="#gallery" class="hover:text-gold-400 transition">गैलरी</a>
-                    <a href="#contact" class="hover:text-gold-400 transition">लोकेशन</a>
+                    <a href="#experience" class="hover:text-gold-400 transition">Day/Night</a>
+                    <a href="#calculator" class="hover:text-gold-400 transition">कैलकुलेटर</a>
+                    <a href="#muhurat" class="hover:text-gold-400 transition">मुहूर्त</a>
                     <a href="#booking" class="hover:text-gold-400 transition">बुकिंग</a>
-                </div>
-                <div class="flex items-center gap-4 text-lg">
-                    <a href="#" class="w-9 h-9 rounded-full bg-royal-800 flex items-center justify-center text-slate-400 hover:text-gold-400 hover:bg-royal-700 transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-9 h-9 rounded-full bg-royal-800 flex items-center justify-center text-slate-400 hover:text-gold-400 hover:bg-royal-700 transition"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-9 h-9 rounded-full bg-royal-800 flex items-center justify-center text-slate-400 hover:text-gold-400 hover:bg-royal-700 transition"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="border-t border-slate-800/80 mt-8 pt-8 text-center text-xs text-slate-500">
@@ -677,15 +719,20 @@
         </div>
     </footer>
 
-    <!-- Floating Quick Action Buttons (Call & WhatsApp) for Mobile -->
-    <div class="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
         <a href="https://wa.me/919876543210?text=Namaste!%20Mujhe%20Indra%20Garden%20Jhansi%20booking%20ke%20bare%20mein%20jankari%20chahiye." target="_blank" aria-label="WhatsApp Us" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition duration-300">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="tel:+919876543210" aria-label="Call Us" class="w-14 h-14 rounded-full bg-gold-500 hover:bg-gold-400 text-royal-900 flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition duration-300">
+        <a href="tel:+919876543210" aria-label="Call Us" class="w-14 h-14 rounded-full bg-gold-500 hover:bg-gold-400 text-royal-950 flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition duration-300">
             <i class="fa-solid fa-phone"></i>
         </a>
     </div>
+
+    <!-- Background Music Audio (Shehnai/Sitar Ambient) -->
+    <audio id="weddingAudio" loop preload="none">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/16/audio_db60f383e5.mp3?filename=indian-instrumental-music-111453.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="script.js"></script>
 </body>
