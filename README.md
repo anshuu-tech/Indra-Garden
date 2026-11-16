@@ -1,28 +1,20 @@
-# 🏰 इन्द्रा गार्डन & बैंक्वेट हॉल, झाँसी (Indra Garden)
+# 🏛️ Indra Garden & Banquet | Jhansi
 
-यह **इन्द्रा गार्डन** (उन्नाव गेट बाहर, नौगजी कुआं, पीतांबरा नगर, झाँसी, उत्तर प्रदेश) के लिए तैयार की गई एक आधुनिक और मोबाइल-फ्रेंडली सिंगल-पेज वेबसाइट है।
+A premier, modern single-page website for **Indra Garden**, Jhansi's leading wedding lawn and banquet grounds located at Bahar Unnao Gate, Naogoji Kua, Jhansi, Uttar Pradesh (PIN: 284002).
 
-## 📁 फ़ाइलें (Files):
-1. `index.html` - मुख्य वेबसाइट कोड (Tailwind CSS, FontAwesome, Google Fonts, और लाइव Google Maps)
-2. `style.css` - कस्टम एनीमेशन्स और स्टाइल्स
-3. `script.js` - मोबाइल मेनू, फ़िल्टर गैलरी, और WhatsApp डायरेक्ट बुकिंग ऑटोमेशन
-4. `README.md` - प्रोजेक्ट विवरण
+## 📁 Repository Structure
+- `index.html` - Professional luxury web application (Tailwind CSS, Playfair Display typography, responsive UI, Google Maps)
+- `style.css` - Custom styling and luxury input interactions
+- `script.js` - Dynamic budget estimator, WhatsApp concierge routing, and filterable gallery
+- `README.md` - Documentation
 
----
+## 🚀 Key Features
+- **Sophisticated Luxury Aesthetic:** Obsidian & Champagne Gold styling tailored for high-end wedding venues.
+- **Interactive Event Cost Estimator:** Real-time budget simulation with guest sliders and add-on toggles.
+- **WhatsApp Concierge Integration:** Direct booking and quotation requests formatted seamlessly for WhatsApp.
+- **Curated Spaces & Amenity Specifications:** Clear overview of lawn capacity, banquet hall, parking, and bridal suites.
+- **Integrated Live Location:** Embedded Google Maps navigation to Bahar Unnao Gate, Jhansi.
 
-## 🌟 मुख्य विशेषताएँ (Features):
-- 👑 **शाही डिज़ाइन:** रॉयल गोल्ड & डार्क थीम (वेडिंग & इवेंट्स के लिए अनुकूल)
-- 📍 **लाइव गूगल मैप:** उन्नाव गेट बाहर, नौगजी कुआं, झाँसी का मैप सीधे वेबसाइट में इंटीग्रेटेड
-- 💬 **WhatsApp बुकिंग फॉर्म:** ग्राहक द्वारा फॉर्म भरते ही विवरण सीधे आपके WhatsApp पर प्राप्त होगा
-- 🖼️ **फ़ोटो गैलरी:** स्टेज, डाइनिंग और नाइट लाइटिंग के लिए इंटरएक्टिव फ़िल्टर्स
-- 💰 **पैकेजेस & सुविधाएँ:** शादी, रिसेप्शन, बर्थडे और पारिवारिक उत्सवों के स्पष्ट पैकेजेस
-- 📞 **क्विक कॉल & चैट:** मोबाइल उपयोगकर्ताओं के लिए फ्लोटिंग कॉल और व्हाट्सएप बटन
-
----
-
-## 🚀 GitHub Pages पर वेबसाइट लाइव (Free Hosting) कैसे करें:
-1. अपनी इस रिपॉज़िटरी की **Settings** में जाएं।
-2. बायीं तरफ **Pages** पर क्लिक करें।
-3. **Branch** के अंतर्गत **main** चुनें और **Save** कर दें।
-4. 1-2 मिनट में आपकी वेबसाइट इस लिंक पर इंटरनेट पर लाइव हो जाएगी:  
-   👉 `https://anshuu-tech.github.io/Indra-Garden/`
+## 🌐 Live URLs
+- **GitHub Pages:** `https://anshuu-tech.github.io/Indra-Garden/`
+- **Vercel:** `https://indra-garden.vercel.app` (when imported)

@@ -1,4 +1,4 @@
-/* Royal Wedding Stylesheet for Indra Garden Jhansi */
+/* Professional Luxury Stylesheet for Indra Garden Jhansi */
 
 html {
     scroll-behavior: smooth;
@@ -6,58 +6,58 @@ html {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #060A12;
+    background: #07090E;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #E5B83B, #9B7415);
-    border-radius: 4px;
+    background: #C5976A;
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #EEC969;
+    background: #D2AF8B;
 }
 
-/* Range input luxury styling */
+/* Luxury Range Input */
 input[type=range] {
     -webkit-appearance: none;
-    height: 8px;
-    background: #162035;
-    border-radius: 4px;
+    height: 6px;
+    background: #1A2233;
+    border-radius: 3px;
     outline: none;
 }
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    background: #E5B83B;
+    background: #C5976A;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(229, 184, 59, 0.7);
-    border: 2px solid #FFF;
+    box-shadow: 0 0 10px rgba(197, 151, 106, 0.4);
+    border: 2px solid #FFFFFF;
     transition: transform 0.15s ease-in-out;
 }
 
 input[type=range]::-webkit-slider-thumb:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
-/* Decor Option active styling */
+/* Active Decor Option Selection */
 .active-option {
-    border-color: #E5B83B !important;
-    background: rgba(229, 184, 59, 0.18) !important;
-    color: #FDF7E7 !important;
-    box-shadow: 0 0 15px rgba(229, 184, 59, 0.25);
+    border-color: #C5976A !important;
+    background-color: rgba(197, 151, 106, 0.15) !important;
+    color: #FAF7F2 !important;
+    box-shadow: 0 0 12px rgba(197, 151, 106, 0.2);
 }
 
-/* Form inputs */
+/* Date Input Indicator */
 input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(0.85);
+    filter: invert(0.8);
     cursor: pointer;
 }
