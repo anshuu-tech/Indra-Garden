@@ -94,7 +94,6 @@
                     <a href="#about" class="text-slate-300 hover:text-champagne-400 transition">About</a>
                     <a href="#spaces" class="text-slate-300 hover:text-champagne-400 transition">Event Spaces</a>
                     <a href="#amenities" class="text-slate-300 hover:text-champagne-400 transition">Amenities</a>
-                    <a href="#estimator" class="text-slate-300 hover:text-champagne-400 transition">Cost Estimator</a>
                     <a href="#gallery" class="text-slate-300 hover:text-champagne-400 transition">Gallery</a>
                     <a href="#contact" class="text-slate-300 hover:text-champagne-400 transition">Location</a>
                 </nav>
@@ -102,7 +101,7 @@
                 <!-- Header Actions -->
                 <div class="flex items-center gap-4">
                     <a href="#booking" class="hidden sm:inline-flex items-center gap-2 px-6 py-3 rounded-full bg-champagne-500 hover:bg-champagne-400 text-onyx-950 font-bold text-xs uppercase tracking-widest transition duration-300 shadow-lg shadow-champagne-500/20">
-                        Book a Visit
+                        Inquire Date
                     </a>
                     <!-- Mobile Hamburger -->
                     <button id="mobileMenuBtn" aria-label="Toggle navigation" class="lg:hidden text-champagne-400 hover:text-white text-2xl p-1">
@@ -118,7 +117,6 @@
             <a href="#about" class="block text-slate-300 hover:text-champagne-400 text-sm font-semibold tracking-wider uppercase">About</a>
             <a href="#spaces" class="block text-slate-300 hover:text-champagne-400 text-sm font-semibold tracking-wider uppercase">Event Spaces</a>
             <a href="#amenities" class="block text-slate-300 hover:text-champagne-400 text-sm font-semibold tracking-wider uppercase">Amenities</a>
-            <a href="#estimator" class="block text-slate-300 hover:text-champagne-400 text-sm font-semibold tracking-wider uppercase">Cost Estimator</a>
             <a href="#gallery" class="block text-slate-300 hover:text-champagne-400 text-sm font-semibold tracking-wider uppercase">Gallery</a>
             <a href="#contact" class="block text-slate-300 hover:text-champagne-400 text-sm font-semibold tracking-wider uppercase">Location & Directions</a>
             <div class="pt-2">
@@ -129,18 +127,19 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        <!-- Hero Background using Real Indra Garden Photography -->
-        <div class="absolute inset-0 z-0">
-            <img src="images/indra-hero-night.jpg" alt="Indra Garden Jhansi Lawn View" class="w-full h-full object-cover opacity-45 scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-onyx-950/60 to-onyx-950/40"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-champagne-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <!-- Hero Section (Clean Luxury Architectural Gradient, Real Photos Exclusively in Gallery) -->
+    <section id="home" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <!-- Ambient Luxury Dark Texture Backdrop -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-onyx-900 via-onyx-950 to-onyx-950">
+            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-champagne-500/10 rounded-full blur-[160px] pointer-events-none"></div>
+            <!-- Subtle Radial Gold Ring Accent -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-champagne-500/10 rounded-full pointer-events-none"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] border border-champagne-500/5 rounded-full pointer-events-none"></div>
         </div>
 
         <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20">
             <!-- Luxury Pill -->
-            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-onyx-900/80 border border-champagne-400/30 text-champagne-300 text-xs uppercase tracking-[0.2em] font-semibold mb-8 backdrop-blur-md">
+            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-onyx-900/90 border border-champagne-400/30 text-champagne-300 text-xs uppercase tracking-[0.25em] font-semibold mb-8 backdrop-blur-md shadow-lg shadow-champagne-500/10">
                 <i class="fa-solid fa-gem text-champagne-400 text-xs"></i> Jhansi's Premier Celebration Grounds
             </div>
 
@@ -152,34 +151,34 @@
             </h1>
 
             <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                Nestled on Unnao Gate Bahar Road, Indra Garden offers an expansive open-air lawn, air-conditioned banquet facilities, and bespoke event infrastructure designed for regal weddings and celebrations.
+                Nestled on Unnao Gate Bahar Road, Indra Garden offers an open-air lawn, banquet facilities, and bespoke event infrastructure designed for weddings, receptions, and distinguished social events.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-full bg-champagne-500 hover:bg-champagne-400 text-onyx-950 font-bold text-xs uppercase tracking-widest transition duration-300 shadow-xl shadow-champagne-500/20">
                     Inquire Venue Availability
                 </a>
-                <a href="#estimator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-onyx-900/90 hover:bg-onyx-800 border border-champagne-500/40 text-slate-200 font-semibold text-xs uppercase tracking-widest transition duration-300 flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-calculator text-champagne-400"></i> Estimate Event Budget
+                <a href="#gallery" class="w-full sm:w-auto px-8 py-4 rounded-full bg-onyx-900/90 hover:bg-onyx-800 border border-champagne-500/40 text-slate-200 font-semibold text-xs uppercase tracking-widest transition duration-300 flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-images text-champagne-400"></i> View Venue Gallery
                 </a>
             </div>
 
-            <!-- Venue Key Specifications -->
+            <!-- Key Specifications -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-16 pt-10 border-t border-champagne-500/15">
                 <div class="p-5 rounded-2xl bg-onyx-900/60 border border-champagne-500/15 backdrop-blur-sm">
-                    <div class="text-3xl sm:text-4xl font-serif font-bold text-champagne-400">2,500+</div>
-                    <div class="text-[11px] uppercase tracking-wider text-slate-400 mt-1.5">Guest Capacity</div>
+                    <div class="text-2xl sm:text-3xl font-serif font-bold text-champagne-400">Grand Capacity</div>
+                    <div class="text-[11px] uppercase tracking-wider text-slate-400 mt-1.5">For Large & Mid-Size Gatherings</div>
                 </div>
                 <div class="p-5 rounded-2xl bg-onyx-900/60 border border-champagne-500/15 backdrop-blur-sm">
-                    <div class="text-3xl sm:text-4xl font-serif font-bold text-champagne-400">45,000</div>
-                    <div class="text-[11px] uppercase tracking-wider text-slate-400 mt-1.5">Sq. Ft. Lush Lawn</div>
+                    <div class="text-2xl sm:text-3xl font-serif font-bold text-champagne-400">Lush Lawn</div>
+                    <div class="text-[11px] uppercase tracking-wider text-slate-400 mt-1.5">Open-Air Manicured Turf</div>
                 </div>
                 <div class="p-5 rounded-2xl bg-onyx-900/60 border border-champagne-500/15 backdrop-blur-sm">
-                    <div class="text-3xl sm:text-4xl font-serif font-bold text-champagne-400">300+</div>
-                    <div class="text-[11px] uppercase tracking-wider text-slate-400 mt-1.5">Vehicle Parking</div>
+                    <div class="text-2xl sm:text-3xl font-serif font-bold text-champagne-400">Ample Parking</div>
+                    <div class="text-[11px] uppercase tracking-wider text-slate-400 mt-1.5">Dedicated Vehicle Space</div>
                 </div>
                 <div class="p-5 rounded-2xl bg-onyx-900/60 border border-champagne-500/15 backdrop-blur-sm">
-                    <div class="text-3xl sm:text-4xl font-serif font-bold text-champagne-400">24/7</div>
+                    <div class="text-2xl sm:text-3xl font-serif font-bold text-champagne-400">24/7 Power</div>
                     <div class="text-[11px] uppercase tracking-wider text-slate-400 mt-1.5">Silent Generator Backup</div>
                 </div>
             </div>
@@ -189,266 +188,115 @@
     <!-- About Section -->
     <section id="about" class="py-24 bg-onyx-900/40 border-t border-b border-champagne-500/15">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Visual Composition with Real Lawn Daytime Photo -->
-                <div class="relative">
-                    <div class="relative z-10 rounded-2xl overflow-hidden border border-champagne-500/30 shadow-2xl">
-                        <img src="images/indra-lawn-daytime.jpg" alt="Indra Garden Jhansi Daytime Grounds" class="w-full h-[480px] object-cover hover:scale-105 transition duration-700">
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+                <div class="inline-flex items-center gap-2 text-champagne-400 text-xs uppercase tracking-[0.25em] font-semibold">
+                    <span class="w-6 h-px bg-champagne-400"></span> About Indra Garden <span class="w-6 h-px bg-champagne-400"></span>
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl font-serif text-white tracking-tight leading-tight">
+                    A Benchmark in Grand Weddings & Exclusive Celebrations
+                </h2>
+
+                <p class="text-slate-300 leading-relaxed font-light text-sm sm:text-base">
+                    Situated on Bahar Unnao Gate Main Road near Naogoji Kua in Jhansi, Indra Garden provides an accommodating and hospitable setting for weddings, receptions, engagements, birthdays, and cultural gatherings. We combine an expansive outdoor lawn with covered facilities to ensure a comfortable celebration for you and your guests.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-left">
+                    <div class="p-5 rounded-xl bg-onyx-950 border border-champagne-500/15">
+                        <i class="fa-solid fa-tree text-champagne-400 mb-2 block text-lg"></i>
+                        <h4 class="font-semibold text-white text-sm">Open-Air & Covered Spaces</h4>
+                        <p class="text-xs text-slate-400 mt-1">Weather-ready arrangements with broad covered dining and pavilion areas.</p>
                     </div>
-                    <!-- Badge Card -->
-                    <div class="absolute -bottom-6 -right-6 z-20 hidden sm:block bg-onyx-950 p-6 rounded-2xl border border-champagne-500/40 shadow-2xl max-w-xs">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-champagne-500/10 text-champagne-400 text-2xl flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-map-location-dot"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-serif font-bold text-white text-base">Unnao Gate Bahar</h4>
-                                <p class="text-xs text-slate-400 mt-0.5">Premier connectivity across Jhansi city</p>
-                            </div>
-                        </div>
+                    <div class="p-5 rounded-xl bg-onyx-950 border border-champagne-500/15">
+                        <i class="fa-solid fa-bed text-champagne-400 mb-2 block text-lg"></i>
+                        <h4 class="font-semibold text-white text-sm">Bridal Dressing Facilities</h4>
+                        <p class="text-xs text-slate-400 mt-1">Private preparation suites with attached washrooms for the family.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-onyx-950 border border-champagne-500/15">
+                        <i class="fa-solid fa-bolt text-champagne-400 mb-2 block text-lg"></i>
+                        <h4 class="font-semibold text-white text-sm">Continuous Power Supply</h4>
+                        <p class="text-xs text-slate-400 mt-1">High-capacity generator backups running seamlessly throughout your event.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-onyx-950 border border-champagne-500/15">
+                        <i class="fa-solid fa-route text-champagne-400 mb-2 block text-lg"></i>
+                        <h4 class="font-semibold text-white text-sm">Convenient Access</h4>
+                        <p class="text-xs text-slate-400 mt-1">Directly accessible via Bahar Unnao Gate road with ease for guest arrivals.</p>
                     </div>
                 </div>
 
-                <!-- Content -->
-                <div class="space-y-6">
-                    <div class="inline-flex items-center gap-2 text-champagne-400 text-xs uppercase tracking-[0.25em] font-semibold">
-                        <span class="w-6 h-px bg-champagne-400"></span> About Indra Garden
-                    </div>
-
-                    <h2 class="text-3xl sm:text-4xl font-serif text-white tracking-tight leading-tight">
-                        A Benchmark in Grand Weddings & Exclusive Celebrations
-                    </h2>
-
-                    <p class="text-slate-300 leading-relaxed font-light text-sm sm:text-base">
-                        Situated at Unnao Gate Bahar near Naogoji Kua in Jhansi, Indra Garden has established itself as an esteemed destination for hosting monumental weddings, receptions, and social galas. We merge wide landscaped open grounds with thoughtful event amenities.
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                        <div class="p-4 rounded-xl bg-onyx-900 border border-champagne-500/15">
-                            <i class="fa-solid fa-circle-check text-champagne-400 mb-2 block"></i>
-                            <h4 class="font-semibold text-white text-sm">Open-Air & Covered Spaces</h4>
-                            <p class="text-xs text-slate-400 mt-1">Weather-ready arrangements with spacious dining sheds.</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-onyx-900 border border-champagne-500/15">
-                            <i class="fa-solid fa-circle-check text-champagne-400 mb-2 block"></i>
-                            <h4 class="font-semibold text-white text-sm">Dedicated Bridal Dressing</h4>
-                            <p class="text-xs text-slate-400 mt-1">Spacious furnished suites for groom and bride families.</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-onyx-900 border border-champagne-500/15">
-                            <i class="fa-solid fa-circle-check text-champagne-400 mb-2 block"></i>
-                            <h4 class="font-semibold text-white text-sm">Continuous Power Supply</h4>
-                            <p class="text-xs text-slate-400 mt-1">Heavy-duty silent generator backups running throughout.</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-onyx-900 border border-champagne-500/15">
-                            <i class="fa-solid fa-circle-check text-champagne-400 mb-2 block"></i>
-                            <h4 class="font-semibold text-white text-sm">Seamless Logistics</h4>
-                            <p class="text-xs text-slate-400 mt-1">Broad entry corridor accommodating grand baarat processions.</p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4">
-                        <a href="#contact" class="inline-flex items-center gap-2 text-champagne-400 text-xs uppercase tracking-widest font-semibold hover:text-champagne-300 transition group">
-                            Schedule an in-person venue tour <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1.5 transition"></i>
-                        </a>
-                    </div>
+                <div class="pt-6">
+                    <a href="#contact" class="inline-flex items-center gap-2 text-champagne-400 text-xs uppercase tracking-widest font-semibold hover:text-champagne-300 transition group">
+                        Schedule an in-person venue tour <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1.5 transition"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Curated Event Spaces using 100% Real Indra Garden Photos -->
+    <!-- Curated Event Spaces -->
     <section id="spaces" class="py-24 bg-onyx-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-champagne-400 text-xs uppercase tracking-[0.25em] font-semibold">Architectural Layout</span>
-                <h2 class="text-3xl sm:text-4xl font-serif text-white mt-2">Versatile Event Venues & Spaces</h2>
+                <span class="text-champagne-400 text-xs uppercase tracking-[0.25em] font-semibold">Venue Areas</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-white mt-2">Versatile Event Grounds</h2>
                 <div class="w-16 h-0.5 bg-champagne-500 mx-auto mt-4"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Space 1: Aerial Lawn -->
-                <div class="rounded-2xl overflow-hidden bg-onyx-900 border border-champagne-500/20 group hover:border-champagne-400/50 transition duration-300">
-                    <div class="h-60 overflow-hidden relative">
-                        <img src="images/indra-aerial-lawn.jpg" alt="Grand Lawn Indra Garden" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 right-4 bg-onyx-950/80 backdrop-blur-md text-champagne-300 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-champagne-400/30">
-                            Up to 2,000 Guests
-                        </span>
+                <!-- Space 1 -->
+                <div class="p-8 rounded-2xl bg-onyx-900 border border-champagne-500/20 hover:border-champagne-400/50 transition duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-champagne-500/10 text-champagne-400 text-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-tree"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold text-white mb-2">The Grand Imperial Lawn</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                            45,000 sq.ft of natural turf ground at Indra Garden, prepared for grand stage architecture, mandap ceremonies, and spacious celebrations.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 border-t border-slate-800 pt-3">
-                            <li><i class="fa-solid fa-check text-champagne-400 mr-1.5"></i> 360-degree perimeter lighting setup</li>
-                            <li><i class="fa-solid fa-check text-champagne-400 mr-1.5"></i> Weather-resistant seating infrastructure</li>
-                        </ul>
-                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">The Open-Air Lawn</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6 font-light">
+                        A manicured green outdoor ground prepared for grand wedding stages, mandap ceremonies, and spacious open-air seating under the evening sky.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li><i class="fa-solid fa-check text-champagne-400 mr-2"></i> Perimeter lighting infrastructure</li>
+                        <li><i class="fa-solid fa-check text-champagne-400 mr-2"></i> Broad baarat arrival pathways</li>
+                    </ul>
                 </div>
 
-                <!-- Space 2: Dining Pavilion -->
-                <div class="rounded-2xl overflow-hidden bg-onyx-900 border border-champagne-500/20 group hover:border-champagne-400/50 transition duration-300">
-                    <div class="h-60 overflow-hidden relative">
-                        <img src="images/indra-dining-pavilion.jpg" alt="Dining Pavilion Indra Garden" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 right-4 bg-onyx-950/80 backdrop-blur-md text-champagne-300 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-champagne-400/30">
-                            Up to 800 Seated
-                        </span>
+                <!-- Space 2 -->
+                <div class="p-8 rounded-2xl bg-onyx-900 border border-champagne-500/20 hover:border-champagne-400/50 transition duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-champagne-500/10 text-champagne-400 text-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-utensils"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold text-white mb-2">The Culinary & Dining Pavilion</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                            Covered dining court at Indra Garden planned for multi-cuisine buffet counters, beverage points, and effortless guest catering flow.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 border-t border-slate-800 pt-3">
-                            <li><i class="fa-solid fa-check text-champagne-400 mr-1.5"></i> Hygiene-focused wash stations</li>
-                            <li><i class="fa-solid fa-check text-champagne-400 mr-1.5"></i> Broad spacing preventing banquet bottlenecks</li>
-                        </ul>
-                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">The Covered Dining Pavilion</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6 font-light">
+                        A sheltered culinary court designed for accommodating multi-cuisine buffet spreads, live counters, and comfortable dining without weather concerns.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li><i class="fa-solid fa-check text-champagne-400 mr-2"></i> Dedicated hand-wash and sanitation stations</li>
+                        <li><i class="fa-solid fa-check text-champagne-400 mr-2"></i> Broad spacing preventing buffet queues</li>
+                    </ul>
                 </div>
 
-                <!-- Space 3: Banquet Setup -->
-                <div class="rounded-2xl overflow-hidden bg-onyx-900 border border-champagne-500/20 group hover:border-champagne-400/50 transition duration-300">
-                    <div class="h-60 overflow-hidden relative">
-                        <img src="images/indra-banquet-setup.jpg" alt="Banquet Setup Indra Garden" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 right-4 bg-onyx-950/80 backdrop-blur-md text-champagne-300 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-champagne-400/30">
-                            Indoor Space
-                        </span>
+                <!-- Space 3 -->
+                <div class="p-8 rounded-2xl bg-onyx-900 border border-champagne-500/20 hover:border-champagne-400/50 transition duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-champagne-500/10 text-champagne-400 text-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-building"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold text-white mb-2">The Royal Banquet & Suites</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                            Suited banquet section accompanied by private preparation suites for the bride, groom, and family members during the event.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 border-t border-slate-800 pt-3">
-                            <li><i class="fa-solid fa-check text-champagne-400 mr-1.5"></i> Attached private washrooms</li>
-                            <li><i class="fa-solid fa-check text-champagne-400 mr-1.5"></i> Secure dressing and makeup mirrors</li>
-                        </ul>
-                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">The Banquet & Dressing Suites</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6 font-light">
+                        Indoor hall space complemented by private preparation rooms for the bride, groom, and immediate family members during the celebration.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li><i class="fa-solid fa-check text-champagne-400 mr-2"></i> Private attached washrooms</li>
+                        <li><i class="fa-solid fa-check text-champagne-400 mr-2"></i> Mirrors and dressing conveniences</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Event Cost Estimator -->
-    <section id="estimator" class="py-24 bg-onyx-900/60 border-t border-b border-champagne-500/15 relative">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-14">
-                <span class="text-champagne-400 text-xs uppercase tracking-[0.25em] font-semibold">Budget Planning</span>
-                <h2 class="text-3xl sm:text-4xl font-serif text-white mt-1">Interactive Event Cost Estimator</h2>
-                <p class="text-slate-400 text-xs sm:text-sm mt-2">Adjust your parameters below to compute an instant estimated quote for your upcoming celebration.</p>
-                <div class="w-16 h-0.5 bg-champagne-500 mx-auto mt-4"></div>
-            </div>
-
-            <!-- Estimator Console -->
-            <div class="bg-onyx-950 rounded-3xl border border-champagne-500/25 p-6 sm:p-10 shadow-2xl">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    
-                    <!-- Controls -->
-                    <div class="lg:col-span-7 space-y-6">
-                        <!-- Guests Slider -->
-                        <div class="p-4 rounded-xl bg-onyx-900/70 border border-slate-800">
-                            <div class="flex items-center justify-between mb-2">
-                                <label class="text-xs font-semibold uppercase tracking-wider text-slate-300">
-                                    Expected Guest Attendance:
-                                </label>
-                                <span id="guestDisplay" class="text-base font-serif font-bold text-champagne-400">500 Guests</span>
-                            </div>
-                            <input type="range" id="guestSlider" min="200" max="2000" step="100" value="500" class="w-full accent-champagne-500 cursor-pointer">
-                            <div class="flex justify-between text-[10px] text-slate-500 mt-1 uppercase tracking-wider">
-                                <span>200</span>
-                                <span>500</span>
-                                <span>1000</span>
-                                <span>1500</span>
-                                <span>2000+</span>
-                            </div>
-                        </div>
-
-                        <!-- Decor Tier -->
-                        <div class="p-4 rounded-xl bg-onyx-900/70 border border-slate-800">
-                            <label class="text-xs font-semibold uppercase tracking-wider text-slate-300 block mb-3">
-                                Stage & Floral Decoration Tier:
-                            </label>
-                            <div class="grid grid-cols-3 gap-3">
-                                <button type="button" class="decor-btn py-2.5 px-2 rounded-lg border border-slate-700 text-xs font-semibold text-slate-300 hover:border-champagne-400 transition" data-val="classic">
-                                    Classic
-                                </button>
-                                <button type="button" class="decor-btn active-option py-2.5 px-2 rounded-lg border border-champagne-400 bg-champagne-500/15 text-champagne-300 text-xs font-semibold" data-val="regal">
-                                    Regal Grand
-                                </button>
-                                <button type="button" class="decor-btn py-2.5 px-2 rounded-lg border border-slate-700 text-xs font-semibold text-slate-300 hover:border-champagne-400 transition" data-val="luxury">
-                                    Ultra Luxury
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Add-on Services -->
-                        <div class="p-4 rounded-xl bg-onyx-900/70 border border-slate-800 space-y-2.5">
-                            <label class="text-xs font-semibold uppercase tracking-wider text-slate-300 block mb-2">
-                                Complementary Add-ons:
-                            </label>
-
-                            <label class="flex items-center justify-between text-xs text-slate-300 cursor-pointer p-2 rounded-lg hover:bg-onyx-850">
-                                <span class="flex items-center gap-2.5">
-                                    <input type="checkbox" id="addSuites" checked class="w-4 h-4 accent-champagne-500 rounded">
-                                    Furnished Bridal & Family AC Dressing Suites
-                                </span>
-                                <span class="text-champagne-400 font-semibold">+₹10,000</span>
-                            </label>
-
-                            <label class="flex items-center justify-between text-xs text-slate-300 cursor-pointer p-2 rounded-lg hover:bg-onyx-850">
-                                <span class="flex items-center gap-2.5">
-                                    <input type="checkbox" id="addSound" checked class="w-4 h-4 accent-champagne-500 rounded">
-                                    Professional Sound System & Stage Illumination
-                                </span>
-                                <span class="text-champagne-400 font-semibold">+₹15,000</span>
-                            </label>
-
-                            <label class="flex items-center justify-between text-xs text-slate-300 cursor-pointer p-2 rounded-lg hover:bg-onyx-850">
-                                <span class="flex items-center gap-2.5">
-                                    <input type="checkbox" id="addSpecialFx" class="w-4 h-4 accent-champagne-500 rounded">
-                                    Cold Pyros & Low Fog Entrance Effects
-                                </span>
-                                <span class="text-champagne-400 font-semibold">+₹8,000</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Output Card -->
-                    <div class="lg:col-span-5 bg-gradient-to-b from-onyx-900 to-onyx-950 p-6 sm:p-8 rounded-2xl border border-champagne-500/35 text-center shadow-xl">
-                        <div class="w-12 h-12 rounded-full bg-champagne-500/10 text-champagne-400 text-xl flex items-center justify-center mx-auto mb-4 border border-champagne-400/20">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                        </div>
-
-                        <span class="text-[11px] uppercase tracking-widest font-bold text-champagne-400 block">Estimated Venue Investment</span>
-                        <div class="my-4">
-                            <div id="totalEstimateDisplay" class="text-3xl sm:text-4xl font-serif font-bold text-white">
-                                ₹1,25,000*
-                            </div>
-                            <span class="text-[10px] text-slate-400 mt-1 block">(*Seasonal & weekday concessions applicable)</span>
-                        </div>
-
-                        <div class="text-xs text-slate-300 border-t border-slate-800 pt-4 mb-6 space-y-1.5 text-left font-light">
-                            <div class="flex justify-between"><span>Full Lawn & Pavilion:</span> <span class="font-medium text-white">Included</span></div>
-                            <div class="flex justify-between"><span>Continuous Generator:</span> <span class="font-medium text-white">Included</span></div>
-                            <div class="flex justify-between"><span>Valet & Parking Attendants:</span> <span class="font-medium text-white">Included</span></div>
-                        </div>
-
-                        <button id="sendQuoteWhatsApp" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-widest transition duration-300 shadow-lg shadow-emerald-900/30 flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-lg"></i> Inquire via WhatsApp
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comprehensive Visual Gallery (12 Authentic Photos from Downloads) -->
-    <section id="gallery" class="py-24 bg-onyx-950">
+    <!-- EXCLUSIVE VISUAL GALLERY (All 12 Real Photos from Downloads - Exactly Once, Zero Duplicates!) -->
+    <section id="gallery" class="py-24 bg-onyx-900/50 border-t border-b border-champagne-500/15">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-champagne-400 text-xs uppercase tracking-[0.25em] font-semibold">Authentic Photography</span>
-                <h2 class="text-3xl sm:text-4xl font-serif text-white mt-1">Glimpses of Indra Garden, Jhansi</h2>
+                <h2 class="text-3xl sm:text-4xl font-serif text-white mt-1">Photo Gallery of Indra Garden, Jhansi</h2>
                 <p class="text-slate-400 text-xs sm:text-sm mt-2">Real venue photography captured on-site at Unnao Gate Bahar, Naogoji Kua, Jhansi.</p>
                 <div class="w-16 h-0.5 bg-champagne-500 mx-auto mt-4"></div>
             </div>
@@ -456,28 +304,28 @@
             <!-- Filter Controls -->
             <div class="flex flex-wrap items-center justify-center gap-2.5 mb-10">
                 <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-champagne-500 text-onyx-950" data-filter="all">All Photos</button>
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-onyx-900 text-slate-300 hover:text-white" data-filter="stage">Stages & Mandap</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-onyx-900 text-slate-300 hover:text-white" data-filter="stage">Stage & Decor</button>
                 <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-onyx-900 text-slate-300 hover:text-white" data-filter="lawn">Lawn & Grounds</button>
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-onyx-900 text-slate-300 hover:text-white" data-filter="night">Night Lighting</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-onyx-900 text-slate-300 hover:text-white" data-filter="night">Night Ambiance</button>
             </div>
 
-            <!-- Gallery Grid with All 12 User Photos -->
+            <!-- Gallery Grid with All 12 User Photos Displayed Non-Duplicated -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 
-                <!-- 1: Real Mandap & Varmala Stage -->
+                <!-- 1: Real Mandap & Stage -->
                 <div class="gallery-item group rounded-xl overflow-hidden border border-champagne-500/15 relative" data-category="stage">
-                    <img src="images/indra-stage-mandap.jpg" alt="Indra Garden Mandap" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <img src="images/indra-stage-mandap.jpg" alt="Indra Garden Mandap & Stage" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
                         <div>
                             <span class="text-champagne-400 text-[10px] font-bold uppercase tracking-widest">Main Stage</span>
-                            <h4 class="text-white font-serif font-bold text-sm">Mandap & Stage Decor</h4>
+                            <h4 class="text-white font-serif font-bold text-sm">Mandap & Stage Setup</h4>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2: Real Night Hero Illuminated Lawn -->
                 <div class="gallery-item group rounded-xl overflow-hidden border border-champagne-500/15 relative" data-category="night">
-                    <img src="images/indra-hero-night.jpg" alt="Indra Garden Night Illumination" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <img src="images/indra-hero-night.jpg" alt="Indra Garden Night Ambiance" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
                         <div>
                             <span class="text-champagne-400 text-[10px] font-bold uppercase tracking-widest">Night Illumination</span>
@@ -503,7 +351,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
                         <div>
                             <span class="text-champagne-400 text-[10px] font-bold uppercase tracking-widest">Stage Detail</span>
-                            <h4 class="text-white font-serif font-bold text-sm">Grand Stage View</h4>
+                            <h4 class="text-white font-serif font-bold text-sm">Stage Backdrop & Lighting</h4>
                         </div>
                     </div>
                 </div>
@@ -514,18 +362,18 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
                         <div>
                             <span class="text-champagne-400 text-[10px] font-bold uppercase tracking-widest">Day View</span>
-                            <h4 class="text-white font-serif font-bold text-sm">Expansive Green Lawn</h4>
+                            <h4 class="text-white font-serif font-bold text-sm">Lush Green Lawn</h4>
                         </div>
                     </div>
                 </div>
 
                 <!-- 6: Real Aerial Grounds Overview -->
                 <div class="gallery-item group rounded-xl overflow-hidden border border-champagne-500/15 relative" data-category="lawn">
-                    <img src="images/indra-aerial-lawn.jpg" alt="Indra Garden Grounds" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <img src="images/indra-aerial-lawn.jpg" alt="Indra Garden Grounds Overview" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
                         <div>
-                            <span class="text-champagne-400 text-[10px] font-bold uppercase tracking-widest">Grounds Overview</span>
-                            <h4 class="text-white font-serif font-bold text-sm">45,000 Sq.Ft Lawn Capacity</h4>
+                            <span class="text-champagne-400 text-[10px] font-bold uppercase tracking-widest">Grounds</span>
+                            <h4 class="text-white font-serif font-bold text-sm">Open Lawn Perspective</h4>
                         </div>
                     </div>
                 </div>
@@ -543,10 +391,10 @@
 
                 <!-- 8: Real Banquet Setup -->
                 <div class="gallery-item group rounded-xl overflow-hidden border border-champagne-500/15 relative" data-category="stage">
-                    <img src="images/indra-banquet-setup.jpg" alt="Indra Garden Banquet Setup" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <img src="images/indra-banquet-setup.jpg" alt="Indra Garden Banquet Hall" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
                         <div>
-                            <span class="text-champagne-400 text-[10px] font-bold uppercase tracking-widest">Banquets</span>
+                            <span class="text-champagne-400 text-[10px] font-bold uppercase tracking-widest">Banquet</span>
                             <h4 class="text-white font-serif font-bold text-sm">Covered Hall & Seating</h4>
                         </div>
                     </div>
@@ -563,7 +411,7 @@
                     </div>
                 </div>
 
-                <!-- 10: Newly Added Google Venue View 1 -->
+                <!-- 10: Venue View 1 -->
                 <div class="gallery-item group rounded-xl overflow-hidden border border-champagne-500/15 relative" data-category="lawn">
                     <img src="images/indra-venue-view-1.jpg" alt="Indra Garden Venue Perspective" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
@@ -574,7 +422,7 @@
                     </div>
                 </div>
 
-                <!-- 11: Newly Added Google Venue View 2 -->
+                <!-- 11: Venue View 2 -->
                 <div class="gallery-item group rounded-xl overflow-hidden border border-champagne-500/15 relative" data-category="stage">
                     <img src="images/indra-venue-view-2.jpg" alt="Indra Garden Pavilion" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
@@ -585,7 +433,7 @@
                     </div>
                 </div>
 
-                <!-- 12: Newly Added Google Venue View 3 -->
+                <!-- 12: Venue View 3 -->
                 <div class="gallery-item group rounded-xl overflow-hidden border border-champagne-500/15 relative" data-category="lawn">
                     <img src="images/indra-venue-view-3.jpg" alt="Indra Garden Grounds Entrance" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
@@ -601,7 +449,7 @@
     </section>
 
     <!-- Amenities Grid -->
-    <section id="amenities" class="py-24 bg-onyx-900/40 border-t border-b border-champagne-500/15">
+    <section id="amenities" class="py-24 bg-onyx-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-champagne-400 text-xs uppercase tracking-[0.25em] font-semibold">Hospitality Infrastructure</span>
@@ -610,65 +458,65 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl bg-onyx-950 border border-champagne-500/15 hover:border-champagne-400/40 transition">
+                <div class="p-8 rounded-2xl bg-onyx-900 border border-champagne-500/15 hover:border-champagne-400/40 transition">
                     <i class="fa-solid fa-tree text-champagne-400 text-2xl mb-5 block"></i>
-                    <h3 class="text-lg font-serif font-bold text-white mb-2">45,000 Sq.Ft Lawn Area</h3>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2">Manicured Open Lawn</h3>
                     <p class="text-xs text-slate-400 leading-relaxed font-light">
-                        Generously proportioned natural turf ground prepared to accommodate large gatherings up to 2,500 attendees without congestion.
+                        Generously proportioned natural turf ground prepared to accommodate your guests comfortably.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-2xl bg-onyx-950 border border-champagne-500/15 hover:border-champagne-400/40 transition">
+                <div class="p-8 rounded-2xl bg-onyx-900 border border-champagne-500/15 hover:border-champagne-400/40 transition">
                     <i class="fa-solid fa-square-parking text-champagne-400 text-2xl mb-5 block"></i>
                     <h3 class="text-lg font-serif font-bold text-white mb-2">Dedicated Vehicle Parking</h3>
                     <p class="text-xs text-slate-400 leading-relaxed font-light">
-                        Segregated parking facilities accommodating 300+ four-wheelers and 500+ two-wheelers managed by trained parking marshals.
+                        Segregated parking facilities for four-wheelers and two-wheelers with convenient parking arrangements.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-2xl bg-onyx-950 border border-champagne-500/15 hover:border-champagne-400/40 transition">
+                <div class="p-8 rounded-2xl bg-onyx-900 border border-champagne-500/15 hover:border-champagne-400/40 transition">
                     <i class="fa-solid fa-bolt text-champagne-400 text-2xl mb-5 block"></i>
-                    <h3 class="text-lg font-serif font-bold text-white mb-2">100% Uninterrupted Power</h3>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2">Uninterrupted Power Backup</h3>
                     <p class="text-xs text-slate-400 leading-relaxed font-light">
-                        High-capacity silent generator backups ensure essential lighting, stage equipment, and culinary counters remain active 24/7.
+                        High-capacity silent generator backups ensure lighting, stage equipment, and catering areas remain active.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-2xl bg-onyx-950 border border-champagne-500/15 hover:border-champagne-400/40 transition">
+                <div class="p-8 rounded-2xl bg-onyx-900 border border-champagne-500/15 hover:border-champagne-400/40 transition">
                     <i class="fa-solid fa-bed text-champagne-400 text-2xl mb-5 block"></i>
-                    <h3 class="text-lg font-serif font-bold text-white mb-2">Air-Conditioned Suites</h3>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2">Preparation Suites</h3>
                     <p class="text-xs text-slate-400 leading-relaxed font-light">
-                        Dedicated air-conditioned rooms with private mirrors, garment racks, and attached washrooms for immediate family members.
+                        Dedicated rooms with mirrors and attached washrooms for immediate family members and dressing needs.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-2xl bg-onyx-950 border border-champagne-500/15 hover:border-champagne-400/40 transition">
+                <div class="p-8 rounded-2xl bg-onyx-900 border border-champagne-500/15 hover:border-champagne-400/40 transition">
                     <i class="fa-solid fa-shield-halved text-champagne-400 text-2xl mb-5 block"></i>
-                    <h3 class="text-lg font-serif font-bold text-white mb-2">24x7 CCTV & Security Staff</h3>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2">24x7 CCTV & Security</h3>
                     <p class="text-xs text-slate-400 leading-relaxed font-light">
-                        Complete campus covered by high-resolution surveillance alongside professional guards stationed at gates and parking perimeters.
+                        Campus covered by surveillance alongside attentive security staff stationed throughout the event.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-2xl bg-onyx-950 border border-champagne-500/15 hover:border-champagne-400/40 transition">
+                <div class="p-8 rounded-2xl bg-onyx-900 border border-champagne-500/15 hover:border-champagne-400/40 transition">
                     <i class="fa-solid fa-route text-champagne-400 text-2xl mb-5 block"></i>
                     <h3 class="text-lg font-serif font-bold text-white mb-2">Prime Jhansi Location</h3>
                     <p class="text-xs text-slate-400 leading-relaxed font-light">
-                        Positioned on the main Bahar Unnao Gate corridor near Naogoji Kua, allowing effortless access from all parts of Jhansi city.
+                        Positioned on the main Bahar Unnao Gate corridor near Naogoji Kua, allowing effortless access from all parts of Jhansi.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reservation Inquiries & WhatsApp Concierge -->
-    <section id="booking" class="py-24 bg-onyx-950 relative">
+    <!-- Reservation Inquiries (Zero Price Mentions, Clean Booking Inquiry) -->
+    <section id="booking" class="py-24 bg-onyx-900/60 border-t border-b border-champagne-500/15 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-gradient-to-br from-onyx-900 to-onyx-950 border border-champagne-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
                 <div class="text-center mb-10">
                     <span class="text-champagne-400 text-xs uppercase tracking-[0.25em] font-semibold">Direct Booking Inquiries</span>
                     <h2 class="text-3xl sm:text-4xl font-serif text-white mt-1">Inquire Venue Availability</h2>
-                    <p class="text-slate-400 text-xs sm:text-sm mt-2">Submit your details below to receive availability status and bespoke quotations directly on WhatsApp.</p>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-2">Submit your event details below to check date availability and arrange a physical venue tour.</p>
                 </div>
 
                 <form id="bookingForm" class="space-y-6">
@@ -689,29 +537,29 @@
                             <input type="date" id="eventDate" required class="w-full px-4 py-3.5 rounded-xl bg-onyx-950 border border-slate-700 text-white focus:outline-none focus:border-champagne-400 transition text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Event Typology *</label>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Event Type *</label>
                             <select id="eventType" class="w-full px-4 py-3.5 rounded-xl bg-onyx-950 border border-slate-700 text-white focus:outline-none focus:border-champagne-400 transition text-sm">
                                 <option value="Wedding & Reception">Wedding & Reception</option>
                                 <option value="Ring Ceremony / Engagement">Ring Ceremony / Engagement</option>
                                 <option value="Sangeet / Mehendi Celebration">Sangeet / Mehendi Celebration</option>
                                 <option value="Birthday & Anniversary Gala">Birthday & Anniversary Gala</option>
-                                <option value="Corporate / Social Assembly">Corporate / Social Assembly</option>
+                                <option value="Social & Family Gathering">Social & Family Gathering</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Estimated Attendance</label>
                             <select id="guestCount" class="w-full px-4 py-3.5 rounded-xl bg-onyx-950 border border-slate-700 text-white focus:outline-none focus:border-champagne-400 transition text-sm">
-                                <option value="300 - 500 Guests">300 - 500 Guests</option>
-                                <option value="500 - 800 Guests">500 - 800 Guests</option>
-                                <option value="800 - 1,200 Guests">800 - 1,200 Guests</option>
-                                <option value="1,200+ Guests">1,200+ Guests</option>
+                                <option value="Up to 300 Guests">Up to 300 Guests</option>
+                                <option value="300 - 600 Guests">300 - 600 Guests</option>
+                                <option value="600 - 1,000 Guests">600 - 1,000 Guests</option>
+                                <option value="1,000+ Guests">1,000+ Guests</option>
                             </select>
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Additional Specifics or Requests</label>
-                        <textarea id="custMessage" rows="3" placeholder="Please mention any catering, decor preferences or questions..." class="w-full px-4 py-3 rounded-xl bg-onyx-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-champagne-400 transition text-sm"></textarea>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Additional Specifics or Questions</label>
+                        <textarea id="custMessage" rows="3" placeholder="Please mention any specific dates, arrangements, or inquiries..." class="w-full px-4 py-3 rounded-xl bg-onyx-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-champagne-400 transition text-sm"></textarea>
                     </div>
 
                     <button type="submit" class="w-full py-4 rounded-xl bg-champagne-500 hover:bg-champagne-400 text-onyx-950 font-bold text-xs uppercase tracking-widest transition duration-300 shadow-xl shadow-champagne-500/20 flex items-center justify-center gap-2">
@@ -723,7 +571,7 @@
     </section>
 
     <!-- Location & Directions -->
-    <section id="contact" class="py-24 bg-onyx-950 border-t border-champagne-500/15">
+    <section id="contact" class="py-24 bg-onyx-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Contact Details -->
@@ -804,7 +652,6 @@
                     <a href="#home" class="hover:text-champagne-400 transition">Home</a>
                     <a href="#about" class="hover:text-champagne-400 transition">About</a>
                     <a href="#spaces" class="hover:text-champagne-400 transition">Spaces</a>
-                    <a href="#estimator" class="hover:text-champagne-400 transition">Estimator</a>
                     <a href="#gallery" class="hover:text-champagne-400 transition">Gallery</a>
                     <a href="#contact" class="hover:text-champagne-400 transition">Directions</a>
                 </div>
