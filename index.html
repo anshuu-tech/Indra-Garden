@@ -6,100 +6,105 @@
     <title>Indra Garden | Marriage Garden & Banquet Hall in Jhansi</title>
     <meta name="description" content="Indra Garden offers a lush green marriage garden and banquet hall in Jhansi at Unnao Gate Bahar, Naogoji Kua. Perfect for weddings, receptions, and celebrations.">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            green: '#2B5E27',      /* Gauri Greens Emerald */
-                            greenHover: '#224B1F',
-                            greenLight: '#F0F6EF',
-                            wine: '#8C2535',       /* Deep Wedding Maroon */
-                            gold: '#C5975A',       /* Warm Accent Gold */
-                            goldLight: '#FAF5EE',
-                            charcoal: '#222831',
-                            muted: '#5A6472',
-                            border: '#E2E8F0',
+                        gauri: {
+                            green: '#4b7637',       /* Gauri Greens Emerald / Olive */
+                            greenDark: '#3b5f2b',
+                            greenLight: '#f4f8f2',
+                            heading: '#3a3a3a',
+                            body: '#4b4f58',
+                            subtleBg: '#f2f5f7',
+                            border: '#e2e8f0',
+                            gold: '#c5975a',
+                            goldLight: '#faf5ee'
                         }
                     },
                     fontFamily: {
-                        heading: ['Playfair Display', 'Georgia', 'serif'],
+                        heading: ['Playfair Display', 'Times', 'Georgia', 'serif'],
                         sans: ['Roboto', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-                        script: ['Sail', 'Playfair Display', 'serif'],
+                        script: ['Sail', 'Playfair Display', 'serif']
                     }
                 }
             }
         }
     </script>
 
-    <!-- Google Fonts: Roboto & Playfair Display -->
+    <!-- Google Fonts: Playfair Display, Roboto, Sail -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Sail&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Gauri Greens Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#FCFCFD] text-brand-charcoal font-sans antialiased selection:bg-brand-green selection:text-white overflow-x-hidden">
+<body class="bg-[#ffffff] text-[#4b4f58] font-sans antialiased selection:bg-[#4b7637] selection:text-white">
 
-    <!-- Top Contact Bar (Gauri Greens Style) -->
-    <div class="bg-brand-green text-white text-xs py-2.5 px-4 border-b border-white/10">
+    <!-- 1. Top Contact Bar (Gauri Greens Style) -->
+    <div class="bg-[#4b7637] text-white text-xs py-2.5 px-4 border-b border-white/10">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
             <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
-                <span><i class="fa-solid fa-location-dot text-amber-300 mr-1.5"></i> Bahar Unnao Gate, Near Naogoji Kua, Jhansi, UP</span>
+                <span><i class="fa-solid fa-location-dot text-[#f4f8f2] mr-1.5"></i> Bahar Unnao Gate, Near Naogoji Kua, Jhansi, UP 284002</span>
                 <span class="hidden md:inline text-white/30">|</span>
-                <span class="hidden md:inline"><i class="fa-regular fa-clock text-amber-300 mr-1.5"></i> Visiting Hours: 9:00 AM - 9:00 PM</span>
+                <span class="hidden md:inline"><i class="fa-regular fa-clock text-[#f4f8f2] mr-1.5"></i> Visiting Hours: 9:00 AM - 9:00 PM</span>
             </div>
-            <div class="flex items-center gap-4 text-xs font-medium">
-                <a href="tel:+919876543210" class="hover:text-amber-200 transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-phone-volume text-amber-300"></i> Contact No: +91 98765 43210
+            <div class="flex items-center gap-5 text-xs font-medium">
+                <a href="mailto:indragardenjhansi@gmail.com" class="hover:text-amber-200 transition hidden sm:inline-flex items-center gap-1.5">
+                    <i class="fa-regular fa-envelope"></i> indragardenjhansi@gmail.com
                 </a>
-                <span class="text-white/30">|</span>
-                <a href="https://wa.me/919876543210?text=Hello%20Indra%20Garden%20Team,%20I%20am%20interested%20in%20venue%20inquiry." target="_blank" class="hover:text-amber-200 transition flex items-center gap-1.5 text-emerald-200">
-                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                <span class="hidden sm:inline text-white/30">|</span>
+                <a href="tel:+919876543210" class="hover:text-amber-200 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone-volume"></i> Contact No: +91 98765 43210
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Bar (Clean White Background, Gauri Greens Structure) -->
+    <!-- 2. Main Navigation Header (Clean Sticky Navbar) -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Brand Logo / Identity -->
+                
+                <!-- Brand Logo / Emblem -->
                 <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 rounded-full bg-brand-greenLight border border-brand-green/30 flex items-center justify-center text-brand-green text-xl shadow-sm group-hover:bg-brand-green group-hover:text-white transition duration-300">
+                    <div class="w-12 h-12 rounded-full bg-[#f4f8f2] border border-[#4b7637]/30 flex items-center justify-center text-[#4b7637] text-2xl shadow-sm group-hover:bg-[#4b7637] group-hover:text-white transition duration-300">
                         <i class="fa-solid fa-tree"></i>
                     </div>
                     <div>
-                        <span class="text-xl sm:text-2xl font-bold font-heading text-brand-green tracking-tight block">INDRA GARDEN</span>
-                        <span class="text-[10px] uppercase tracking-widest text-brand-muted font-medium block">Marriage Garden & Banquet • Jhansi</span>
+                        <span class="text-xl sm:text-2xl font-bold font-heading text-[#4b7637] tracking-tight block">INDRA GARDEN</span>
+                        <span class="text-[10px] uppercase tracking-widest text-[#5a6472] font-medium block">Marriage Garden & Banquet • Jhansi</span>
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center gap-7 text-xs uppercase tracking-wider font-medium text-slate-700">
-                    <a href="#home" class="text-brand-green font-bold hover:text-brand-greenHover transition">Home</a>
-                    <a href="#why-us" class="hover:text-brand-green transition">Why Indra Garden</a>
-                    <a href="#venue-spaces" class="hover:text-brand-green transition">The Venue</a>
-                    <a href="#events" class="hover:text-brand-green transition">Events</a>
-                    <a href="#add-ons" class="hover:text-brand-green transition">Facilities</a>
-                    <a href="#gallery" class="hover:text-brand-green transition">Photo Gallery</a>
-                    <a href="#faq" class="hover:text-brand-green transition">FAQs</a>
-                    <a href="#contact" class="hover:text-brand-green transition">Contact</a>
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden xl:flex items-center gap-6 text-[13px] font-medium text-[#3a3a3a]">
+                    <a href="#home" class="text-[#4b7637] font-semibold hover:text-[#3b5f2b] transition">Home</a>
+                    <a href="#venue-spaces" class="hover:text-[#4b7637] transition">The Venue</a>
+                    <a href="#why-us" class="hover:text-[#4b7637] transition">Why Indra Garden</a>
+                    <a href="#green-celebrations" class="hover:text-[#4b7637] transition">Green Ambience</a>
+                    <a href="#events" class="hover:text-[#4b7637] transition">Events</a>
+                    <a href="#add-ons" class="hover:text-[#4b7637] transition">Add-Ons</a>
+                    <a href="#gallery" class="hover:text-[#4b7637] transition">Gallery</a>
+                    <a href="#faq" class="hover:text-[#4b7637] transition">FAQs</a>
+                    <a href="#contact" class="hover:text-[#4b7637] transition">Contact</a>
                 </nav>
 
-                <!-- CTA Button -->
+                <!-- Right Action Buttons -->
                 <div class="flex items-center gap-3">
-                    <a href="#enquire" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-md bg-brand-green hover:bg-brand-greenHover text-white font-medium text-xs uppercase tracking-wider transition shadow-sm">
-                        Enquire Now
+                    <a href="#enquire" class="btn-gauri-primary">
+                        <i class="fa-regular fa-calendar-check"></i> Enquire Now
                     </a>
-                    <!-- Mobile Hamburger -->
-                    <button id="mobileMenuBtn" aria-label="Toggle menu" class="lg:hidden text-brand-charcoal hover:text-brand-green text-2xl p-1">
+                    
+                    <!-- Mobile Hamburger Button -->
+                    <button id="mobileMenuBtn" aria-label="Toggle mobile menu" class="xl:hidden text-[#3a3a3a] hover:text-[#4b7637] text-2xl p-1.5 focus:outline-none">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
@@ -107,461 +112,666 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-3 shadow-lg">
-            <a href="#home" class="block text-brand-green font-bold text-sm">Home</a>
-            <a href="#why-us" class="block text-slate-700 hover:text-brand-green text-sm">Why Indra Garden</a>
-            <a href="#venue-spaces" class="block text-slate-700 hover:text-brand-green text-sm">The Venue</a>
-            <a href="#events" class="block text-slate-700 hover:text-brand-green text-sm">Events</a>
-            <a href="#add-ons" class="block text-slate-700 hover:text-brand-green text-sm">Facilities & Add-Ons</a>
-            <a href="#gallery" class="block text-slate-700 hover:text-brand-green text-sm">Photo Gallery</a>
-            <a href="#faq" class="block text-slate-700 hover:text-brand-green text-sm">FAQs</a>
-            <a href="#contact" class="block text-slate-700 hover:text-brand-green text-sm">Contact Us</a>
+        <div id="mobileMenu" class="hidden xl:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-3 shadow-xl">
+            <a href="#home" class="block text-[#4b7637] font-bold text-sm">Home</a>
+            <a href="#venue-spaces" class="block text-[#3a3a3a] hover:text-[#4b7637] text-sm">The Venue</a>
+            <a href="#why-us" class="block text-[#3a3a3a] hover:text-[#4b7637] text-sm">Why Indra Garden</a>
+            <a href="#green-celebrations" class="block text-[#3a3a3a] hover:text-[#4b7637] text-sm">Green Ambience</a>
+            <a href="#events" class="block text-[#3a3a3a] hover:text-[#4b7637] text-sm">Events</a>
+            <a href="#add-ons" class="block text-[#3a3a3a] hover:text-[#4b7637] text-sm">Facilities & Add-Ons</a>
+            <a href="#gallery" class="block text-[#3a3a3a] hover:text-[#4b7637] text-sm">Photo Gallery</a>
+            <a href="#faq" class="block text-[#3a3a3a] hover:text-[#4b7637] text-sm">Frequently Asked Questions</a>
+            <a href="#contact" class="block text-[#3a3a3a] hover:text-[#4b7637] text-sm">Location & Directions</a>
             <div class="pt-2">
-                <a href="#enquire" class="block text-center w-full py-3 rounded-md bg-brand-green text-white font-medium text-xs uppercase tracking-wider">
+                <a href="#enquire" class="btn-gauri-primary w-full text-center">
                     Enquire Now
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Banner Section (Gauri Greens Clean Architectural Banner) -->
-    <section id="home" class="relative bg-gradient-to-b from-brand-greenLight/60 via-white to-white py-20 lg:py-28 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-3xl mx-auto text-center space-y-6">
-                <!-- Welcome Tag -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-xs font-semibold tracking-wider uppercase">
-                    <i class="fa-solid fa-crown text-amber-600 text-xs"></i> Premier Wedding Venue in Jhansi
+    <!-- 3. Hero Section (Gauri Greens Matching Architectural Welcome Banner) -->
+    <section id="home" class="relative bg-gradient-to-b from-[#f2f5f7] via-white to-white py-16 sm:py-24 border-b border-slate-100 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <!-- Decorative Tagline -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f4f8f2] border border-[#4b7637]/30 text-[#4b7637] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+                <i class="fa-solid fa-crown text-[#c5975a]"></i> Premier Wedding Destination in Jhansi
+            </div>
+
+            <!-- Exact Gauri Greens Title -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-semibold text-[#3a3a3a] tracking-tight leading-tight">
+                Marriage Garden & Banquet Hall in Jhansi
+            </h1>
+
+            <!-- Signature Gauri Greens Ornamental Divider -->
+            <img src="images/heading-divider.png" alt="divider" class="heading-divider">
+
+            <!-- Verbatim Paragraph from Gauri Greens (Adapted for Jhansi) -->
+            <p class="text-sm sm:text-base md:text-lg text-[#4b4f58] leading-relaxed max-w-3xl mx-auto font-normal">
+                Cherish every single moment with your loved ones. Create a fizz about your special bash much before the gala event at our marriage garden in Jhansi. Plan your wedding or any gleeful occasion at Indra Garden in the most beautiful way possible. Figure out everything you need to organize your big day. From lavish wedding venue & lawn to perfect banquet halls, we’ve got you covered for everything. We are the one-stop destination for your wedding and reception parties. You’ll certainly not regret spending your time at the premier marriage garden in Jhansi accompanied with our impeccable hospitality and décor.
+            </p>
+
+            <!-- CTA Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+                <a href="#venue-spaces" class="btn-gauri-secondary w-full sm:w-auto">
+                    Know More
+                </a>
+                <a href="#enquire" class="btn-gauri-primary w-full sm:w-auto">
+                    <i class="fa-regular fa-envelope"></i> Enquire Now!
+                </a>
+            </div>
+
+            <!-- Key Highlight Strip (4 Clean Feature Badges, No Square Footage, No Prices) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-14 border-t border-slate-200 mt-12 text-center">
+                <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-[#4b7637]/40 transition">
+                    <i class="fa-solid fa-tree text-[#4b7637] text-2xl mb-2"></i>
+                    <h4 class="font-bold text-[#3a3a3a] text-sm">Lush Green Lawn</h4>
+                    <p class="text-xs text-[#5a6472] mt-0.5">Open-Air Natural Turf</p>
                 </div>
-
-                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
-                    Marriage Garden & Banquet Hall in Jhansi
-                </h1>
-
-                <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-light">
-                    Cherish every single moment with your loved ones. Plan your wedding or any gleeful occasion at Indra Garden in the most beautiful way possible. From a lavish open wedding lawn to comfortable banquet spaces, we ensure your big day is truly memorable.
-                </p>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
-                    <a href="#enquire" class="w-full sm:w-auto px-8 py-3.5 rounded-md bg-brand-green hover:bg-brand-greenHover text-white font-medium text-sm tracking-wider uppercase shadow-md transition">
-                        Enquire Now
-                    </a>
-                    <a href="#gallery" class="w-full sm:w-auto px-8 py-3.5 rounded-md bg-white border border-brand-green text-brand-green hover:bg-brand-greenLight font-medium text-sm tracking-wider uppercase transition shadow-sm flex items-center justify-center gap-2">
-                        <i class="fa-regular fa-images"></i> View Photo Gallery
-                    </a>
+                <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-[#4b7637]/40 transition">
+                    <i class="fa-solid fa-square-parking text-[#4b7637] text-2xl mb-2"></i>
+                    <h4 class="font-bold text-[#3a3a3a] text-sm">In-House Parking</h4>
+                    <p class="text-xs text-[#5a6472] mt-0.5">Secure & Spacious</p>
                 </div>
-
-                <!-- Feature Strip (Clean White Boxes, No Square Footage, No Prices) -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-12 border-t border-slate-200/80 text-center">
-                    <div class="p-4 rounded-xl bg-white border border-slate-200/70 shadow-sm">
-                        <i class="fa-solid fa-tree text-brand-green text-2xl mb-2"></i>
-                        <h4 class="font-bold text-slate-800 text-sm">Lush Green Lawn</h4>
-                        <p class="text-[11px] text-slate-500 mt-0.5">Open-Air Natural Turf</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-white border border-slate-200/70 shadow-sm">
-                        <i class="fa-solid fa-square-parking text-brand-green text-2xl mb-2"></i>
-                        <h4 class="font-bold text-slate-800 text-sm">In-House Parking</h4>
-                        <p class="text-[11px] text-slate-500 mt-0.5">Spacious & Safe</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-white border border-slate-200/70 shadow-sm">
-                        <i class="fa-solid fa-bed text-brand-green text-2xl mb-2"></i>
-                        <h4 class="font-bold text-slate-800 text-sm">Dressing Rooms</h4>
-                        <p class="text-[11px] text-slate-500 mt-0.5">Attached Amenities</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-white border border-slate-200/70 shadow-sm">
-                        <i class="fa-solid fa-bolt text-brand-green text-2xl mb-2"></i>
-                        <h4 class="font-bold text-slate-800 text-sm">Power Backup</h4>
-                        <p class="text-[11px] text-slate-500 mt-0.5">24x7 Silent Generator</p>
-                    </div>
+                <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-[#4b7637]/40 transition">
+                    <i class="fa-solid fa-utensils text-[#4b7637] text-2xl mb-2"></i>
+                    <h4 class="font-bold text-[#3a3a3a] text-sm">Covered Dining</h4>
+                    <p class="text-xs text-[#5a6472] mt-0.5">Weatherproof Pavilion</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-[#4b7637]/40 transition">
+                    <i class="fa-solid fa-bolt text-[#4b7637] text-2xl mb-2"></i>
+                    <h4 class="font-bold text-[#3a3a3a] text-sm">Power Backup</h4>
+                    <p class="text-xs text-[#5a6472] mt-0.5">24x7 Silent Generator</p>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- SECTION: Why Indra Garden (Directly matching Gauri Greens 'Why Gauri Greens' Section) -->
-    <section id="why-us" class="py-20 bg-white border-t border-b border-slate-100">
+    <!-- 4. SECTION: Why Indra Garden (Exact Gauri Greens 'Why Gauri Greens' Section) -->
+    <section id="why-us" class="py-20 bg-white border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs uppercase font-bold tracking-widest text-brand-green">Why Choose Us</span>
-                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 mt-1">Why Indra Garden</h2>
-                <div class="w-16 h-1 bg-brand-green mx-auto mt-4 rounded-full"></div>
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-[#3a3a3a]">
+                    Why Indra Garden
+                </h2>
+                <img src="images/heading-divider.png" alt="divider" class="heading-divider">
+                <p class="text-sm sm:text-base text-[#5a6472] leading-relaxed">
+                    Experience regal hospitality, pristine greenery, and flawless celebration infrastructure tailored for your grand occasions.
+                </p>
             </div>
 
+            <!-- 6 Icon Boxes Matching Gauri Greens -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="p-8 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green/40 hover:shadow-md transition duration-300">
-                    <div class="w-14 h-14 rounded-full bg-brand-green/10 text-brand-green text-2xl flex items-center justify-center mb-6">
+                
+                <!-- Box 1 -->
+                <div class="gauri-card p-8 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-[#f4f8f2] border border-[#4b7637]/30 text-[#4b7637] text-2xl flex items-center justify-center mb-5 group-hover:bg-[#4b7637] group-hover:text-white transition duration-300 shadow-sm">
                         <i class="fa-solid fa-seedling"></i>
                     </div>
-                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-2">Lush Green Property</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed font-light">
-                        Indra Garden is situated in a welcoming open setting in Jhansi, surrounded by nature and greenery to make every wedding ritual feel refreshing and picturesque.
+                    <h3 class="text-xl font-heading font-semibold text-[#3a3a3a] mb-2.5">Lush green Resort Property</h3>
+                    <p class="text-xs sm:text-sm text-[#4b4f58] leading-relaxed">
+                        Indra Garden is situated in a welcoming open setting in Jhansi, surrounded by nature and lush greenery to make every wedding ritual feel refreshing, majestic, and picturesque.
                     </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="p-8 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green/40 hover:shadow-md transition duration-300">
-                    <div class="w-14 h-14 rounded-full bg-brand-green/10 text-brand-green text-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-car-side"></i>
+                <!-- Box 2 -->
+                <div class="gauri-card p-8 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-[#f4f8f2] border border-[#4b7637]/30 text-[#4b7637] text-2xl flex items-center justify-center mb-5 group-hover:bg-[#4b7637] group-hover:text-white transition duration-300 shadow-sm">
+                        <i class="fa-solid fa-square-parking"></i>
                     </div>
-                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-2">In-House Parking Facility</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed font-light">
-                        We provide dedicated in-house parking space for two-wheelers and four-wheelers, ensuring your guests arrive and park with complete peace of mind.
+                    <h3 class="text-xl font-heading font-semibold text-[#3a3a3a] mb-2.5">In-House Parking Facility</h3>
+                    <p class="text-xs sm:text-sm text-[#4b4f58] leading-relaxed">
+                        We provide dedicated in-house parking space for two-wheelers and four-wheelers, ensuring your guests and family arrive, park, and enter with complete peace of mind.
                     </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="p-8 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green/40 hover:shadow-md transition duration-300">
-                    <div class="w-14 h-14 rounded-full bg-brand-green/10 text-brand-green text-2xl flex items-center justify-center mb-6">
+                <!-- Box 3 -->
+                <div class="gauri-card p-8 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-[#f4f8f2] border border-[#4b7637]/30 text-[#4b7637] text-2xl flex items-center justify-center mb-5 group-hover:bg-[#4b7637] group-hover:text-white transition duration-300 shadow-sm">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
-                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-2">Best Decoration & Setup</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed font-light">
-                        From floral mandaps and royal varmala stages to ambient entrance lighting, our venue infrastructure adapts to your dream wedding themes effortlessly.
+                    <h3 class="text-xl font-heading font-semibold text-[#3a3a3a] mb-2.5">Best Decoration</h3>
+                    <p class="text-xs sm:text-sm text-[#4b4f58] leading-relaxed">
+                        From traditional floral mandaps and royal varmala stages to ambient tree fairy-lights, our venue infrastructure adapts to your dream wedding themes effortlessly.
                     </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="p-8 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green/40 hover:shadow-md transition duration-300">
-                    <div class="w-14 h-14 rounded-full bg-brand-green/10 text-brand-green text-2xl flex items-center justify-center mb-6">
+                <!-- Box 4 -->
+                <div class="gauri-card p-8 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-[#f4f8f2] border border-[#4b7637]/30 text-[#4b7637] text-2xl flex items-center justify-center mb-5 group-hover:bg-[#4b7637] group-hover:text-white transition duration-300 shadow-sm">
                         <i class="fa-solid fa-utensils"></i>
                     </div>
-                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-2">Covered Catering Space</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed font-light">
-                        A sheltered culinary court with ample room for multi-cuisine buffet spreads, live food stalls, and comfortable dining tables without crowd congestion.
+                    <h3 class="text-xl font-heading font-semibold text-[#3a3a3a] mb-2.5">Covered Catering Space</h3>
+                    <p class="text-xs sm:text-sm text-[#4b4f58] leading-relaxed">
+                        A sheltered culinary court with ample room for multi-cuisine buffet spreads, live food stalls, and comfortable dining tables without crowd congestion or weather worries.
                     </p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="p-8 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green/40 hover:shadow-md transition duration-300">
-                    <div class="w-14 h-14 rounded-full bg-brand-green/10 text-brand-green text-2xl flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-door-closed"></i>
+                <!-- Box 5 -->
+                <div class="gauri-card p-8 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-[#f4f8f2] border border-[#4b7637]/30 text-[#4b7637] text-2xl flex items-center justify-center mb-5 group-hover:bg-[#4b7637] group-hover:text-white transition duration-300 shadow-sm">
+                        <i class="fa-solid fa-bed"></i>
                     </div>
-                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-2">Comfortable Accommodation</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed font-light">
-                        Equipped with private dressing rooms and suites for the bride, groom, and family members to rest and prepare comfortably throughout the wedding day.
+                    <h3 class="text-xl font-heading font-semibold text-[#3a3a3a] mb-2.5">Comfortable Accommodation</h3>
+                    <p class="text-xs sm:text-sm text-[#4b4f58] leading-relaxed">
+                        Equipped with private air-conditioned dressing rooms and suites for the bride, groom, and family members to rest and prepare comfortably throughout the wedding day.
                     </p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="p-8 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green/40 hover:shadow-md transition duration-300">
-                    <div class="w-14 h-14 rounded-full bg-brand-green/10 text-brand-green text-2xl flex items-center justify-center mb-6">
+                <!-- Box 6 -->
+                <div class="gauri-card p-8 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 rounded-full bg-[#f4f8f2] border border-[#4b7637]/30 text-[#4b7637] text-2xl flex items-center justify-center mb-5 group-hover:bg-[#4b7637] group-hover:text-white transition duration-300 shadow-sm">
                         <i class="fa-solid fa-handshake-angle"></i>
                     </div>
-                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-2">Unmatchable Hospitality</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed font-light">
-                        Our management team works hand-in-hand with hosts to ensure timely coordination, clean surroundings, and attentive assistance at every stage.
+                    <h3 class="text-xl font-heading font-semibold text-[#3a3a3a] mb-2.5">Unmatchable Hospitality</h3>
+                    <p class="text-xs sm:text-sm text-[#4b4f58] leading-relaxed">
+                        Our management team works hand-in-hand with hosts to ensure timely coordination, clean surroundings, and attentive assistance at every stage of your event.
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- SECTION: Wedding Venue & Lawn (The Venue Details) -->
-    <section id="venue-spaces" class="py-20 bg-[#FAFBF9]">
+    <!-- 5. SECTION: Wedding Venue & Lawn (Exact Gauri Greens Section) -->
+    <section id="venue-spaces" class="py-20 bg-[#f2f5f7] border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs uppercase font-bold tracking-widest text-brand-green">Venue Spaces</span>
-                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 mt-1">Wedding Venue & Lawn</h2>
-                <div class="w-16 h-1 bg-brand-green mx-auto mt-4 rounded-full"></div>
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-[#3a3a3a]">
+                    Wedding Venue & Lawn
+                </h2>
+                <img src="images/heading-divider.png" alt="divider" class="heading-divider">
+                <p class="text-sm sm:text-base text-[#4b4f58] leading-relaxed">
+                    Plan your wedding, reception and other memorable occasions at Indra Garden, Jhansi’s premier marriage garden, opening the doors for ‘unforgettable memories’. Our spacious marriage lawn & wedding venue is perfect for creating cheerful moments that will have everyone talking long after the occasion.
+                </p>
             </div>
 
+            <!-- 3 Venue Spaces Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Venue Card 1 -->
-                <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 rounded-lg bg-emerald-50 text-brand-green flex items-center justify-center text-xl mb-5">
-                        <i class="fa-solid fa-champagne-glasses"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-2">The Open Wedding Lawn</h3>
-                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-light mb-4">
-                        Spacious, open-air green grounds ideal for grand stage arrangements, beautiful mandaps, and evening celebrations with ample seating for all your attendees.
-                    </p>
-                    <ul class="text-xs text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
-                        <li><i class="fa-solid fa-circle-check text-brand-green mr-1.5"></i> Open-air starlit ambiance</li>
-                        <li><i class="fa-solid fa-circle-check text-brand-green mr-1.5"></i> Wide baarat entry pathway</li>
-                    </ul>
-                </div>
-
-                <!-- Venue Card 2 -->
-                <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 rounded-lg bg-emerald-50 text-brand-green flex items-center justify-center text-xl mb-5">
-                        <i class="fa-solid fa-bell-concierge"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-2">Covered Dining Pavilion</h3>
-                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-light mb-4">
-                        A sheltered catering and buffet space that shields against seasonal weather changes, keeping your food counters, dessert points, and guests well-protected.
-                    </p>
-                    <ul class="text-xs text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
-                        <li><i class="fa-solid fa-circle-check text-brand-green mr-1.5"></i> Dedicated handwash facilities</li>
-                        <li><i class="fa-solid fa-circle-check text-brand-green mr-1.5"></i> Ample aisle space for buffet lines</li>
-                    </ul>
-                </div>
-
-                <!-- Venue Card 3 -->
-                <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 rounded-lg bg-emerald-50 text-brand-green flex items-center justify-center text-xl mb-5">
-                        <i class="fa-solid fa-hotel"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-2">Banquet & Dressing Suites</h3>
-                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-light mb-4">
-                        Equipped with private rooms offering full-length mirrors, attached washrooms, and dressing space for bride and groom families to get ready on-site.
-                    </p>
-                    <ul class="text-xs text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
-                        <li><i class="fa-solid fa-circle-check text-brand-green mr-1.5"></i> Secure storage for belongings</li>
-                        <li><i class="fa-solid fa-circle-check text-brand-green mr-1.5"></i> Close proximity to the main stage</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: Events (Gauri Greens Style Events Showcase) -->
-    <section id="events" class="py-20 bg-white border-t border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs uppercase font-bold tracking-widest text-brand-green">Celebrate Life</span>
-                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 mt-1">Events We Host</h2>
-                <div class="w-16 h-1 bg-brand-green mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
-                <div class="p-6 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green hover:shadow-sm transition">
-                    <i class="fa-solid fa-rings-wedding text-brand-green text-3xl mb-3 block"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Weddings</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Vows & Reception</p>
-                </div>
-                <div class="p-6 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green hover:shadow-sm transition">
-                    <i class="fa-solid fa-guitar text-brand-green text-3xl mb-3 block"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Sangeet</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Dance & Music</p>
-                </div>
-                <div class="p-6 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green hover:shadow-sm transition">
-                    <i class="fa-solid fa-gem text-brand-green text-3xl mb-3 block"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Ring Ceremony</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Engagements</p>
-                </div>
-                <div class="p-6 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green hover:shadow-sm transition">
-                    <i class="fa-solid fa-cake-candles text-brand-green text-3xl mb-3 block"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Birthdays</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Parties & Joy</p>
-                </div>
-                <div class="p-6 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green hover:shadow-sm transition">
-                    <i class="fa-solid fa-glass-water-droplet text-brand-green text-3xl mb-3 block"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Anniversaries</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Milestones</p>
-                </div>
-                <div class="p-6 rounded-xl bg-[#FAFBF9] border border-slate-200/80 hover:border-brand-green hover:shadow-sm transition">
-                    <i class="fa-solid fa-users text-brand-green text-3xl mb-3 block"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Social Meets</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Assemblies</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: Best-In-Class Add-Ons (Gauri Greens Matching Feature Grid) -->
-    <section id="add-ons" class="py-20 bg-[#FAFBF9]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs uppercase font-bold tracking-widest text-brand-green">Facilities & Special Features</span>
-                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 mt-1">Best-In-Class Venue Add-Ons</h2>
-                <div class="w-16 h-1 bg-brand-green mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                <div class="p-5 rounded-lg bg-white border border-slate-200/80 text-center shadow-sm">
-                    <i class="fa-solid fa-palette text-amber-600 text-2xl mb-2"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Theme Based Decor</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Floral & Royal Themes</p>
-                </div>
-                <div class="p-5 rounded-lg bg-white border border-slate-200/80 text-center shadow-sm">
-                    <i class="fa-solid fa-person-walking-arrow-right text-amber-600 text-2xl mb-2"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Grand Bridal Entry</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Special Aisle Walkways</p>
-                </div>
-                <div class="p-5 rounded-lg bg-white border border-slate-200/80 text-center shadow-sm">
-                    <i class="fa-solid fa-wand-magic text-amber-600 text-2xl mb-2"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Varmala Event</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Cold Pyros & Low Fog</p>
-                </div>
-                <div class="p-5 rounded-lg bg-white border border-slate-200/80 text-center shadow-sm">
-                    <i class="fa-solid fa-horse text-amber-600 text-2xl mb-2"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Baraat Procession</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Broad Arrival Corridor</p>
-                </div>
-                <div class="p-5 rounded-lg bg-white border border-slate-200/80 text-center shadow-sm">
-                    <i class="fa-solid fa-square-parking text-amber-600 text-2xl mb-2"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">In-House Parking</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Dedicated Car & Bike Space</p>
-                </div>
-                <div class="p-5 rounded-lg bg-white border border-slate-200/80 text-center shadow-sm">
-                    <i class="fa-solid fa-bolt text-amber-600 text-2xl mb-2"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Silent Generator</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">24x7 Power Backup</p>
-                </div>
-                <div class="p-5 rounded-lg bg-white border border-slate-200/80 text-center shadow-sm">
-                    <i class="fa-solid fa-shield-halved text-amber-600 text-2xl mb-2"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">CCTV Security</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">Campus Surveillance</p>
-                </div>
-                <div class="p-5 rounded-lg bg-white border border-slate-200/80 text-center shadow-sm">
-                    <i class="fa-solid fa-lightbulb text-amber-600 text-2xl mb-2"></i>
-                    <h4 class="font-bold text-slate-800 text-sm">Evening Lighting</h4>
-                    <p class="text-[11px] text-slate-500 mt-1">360° Lawn Illumination</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: Photo Gallery (ALL 12 REAL PHOTOS FROM DOWNLOADS - EXACTLY ONCE, NO DUPLICATES) -->
-    <section id="gallery" class="py-20 bg-white border-t border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs uppercase font-bold tracking-widest text-brand-green">Celebrate Every Moment</span>
-                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 mt-1">Real Photos of Indra Garden</h2>
-                <p class="text-slate-500 text-xs sm:text-sm mt-2">Authentic on-site venue photographs captured at Unnao Gate Bahar, Naogoji Kua, Jhansi.</p>
-                <div class="w-16 h-1 bg-brand-green mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <!-- Filter Buttons -->
-            <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-green text-white shadow-sm" data-filter="all">All Photos</button>
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-filter="stage">Stage & Decor</button>
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-filter="lawn">Lawn & Grounds</button>
-                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-filter="night">Night Ambiance</button>
-            </div>
-
-            <!-- Gallery Grid with All 12 User Photos Displayed Uniquely Once -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 
-                <!-- 1: Real Mandap & Stage -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="stage">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-stage-mandap.jpg" alt="Indra Garden Mandap & Stage" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <!-- Card 1: Grand Open Lawn -->
+                <div class="gauri-card p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-2xl mb-6 shadow-sm border border-[#4b7637]/20">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-[#3a3a3a] mb-3">The Grand Open Lawn</h3>
+                        <p class="text-xs sm:text-sm text-[#4b4f58] leading-relaxed mb-6">
+                            Expansive, open-air green grounds ideal for grand stage arrangements, beautiful mandaps, and evening celebrations with ample seating for all your attendees.
+                        </p>
+                        <ul class="text-xs text-[#5a6472] space-y-2 border-t border-slate-100 pt-4 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4b7637]"></i> Open-air starlit ambiance</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4b7637]"></i> Wide baraat entry pathway</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4b7637]"></i> Natural grass turf & tree perimeter</li>
+                        </ul>
                     </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Main Stage</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Mandap & Stage Decor</h4>
+                    <a href="#enquire" class="btn-gauri-secondary text-center w-full">
+                        Enquire for Lawn
+                    </a>
+                </div>
+
+                <!-- Card 2: Covered Dining Pavilion -->
+                <div class="gauri-card p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-2xl mb-6 shadow-sm border border-[#4b7637]/20">
+                            <i class="fa-solid fa-bell-concierge"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-[#3a3a3a] mb-3">Covered Dining Pavilion</h3>
+                        <p class="text-xs sm:text-sm text-[#4b4f58] leading-relaxed mb-6">
+                            A sheltered catering and buffet space that shields against seasonal weather changes, keeping your food counters, dessert points, and guests well-protected.
+                        </p>
+                        <ul class="text-xs text-[#5a6472] space-y-2 border-t border-slate-100 pt-4 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4b7637]"></i> Dedicated handwash facilities</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4b7637]"></i> Ample aisle space for buffet lines</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4b7637]"></i> Live cooking & chaat station zones</li>
+                        </ul>
+                    </div>
+                    <a href="#enquire" class="btn-gauri-secondary text-center w-full">
+                        Enquire for Dining
+                    </a>
+                </div>
+
+                <!-- Card 3: Banquet & Dressing Suites -->
+                <div class="gauri-card p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-2xl mb-6 shadow-sm border border-[#4b7637]/20">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-semibold text-[#3a3a3a] mb-3">Banquet & Dressing Suites</h3>
+                        <p class="text-xs sm:text-sm text-[#4b4f58] leading-relaxed mb-6">
+                            Equipped with private rooms offering full-length mirrors, attached washrooms, and dressing space for bride, groom, and close families to prepare on-site.
+                        </p>
+                        <ul class="text-xs text-[#5a6472] space-y-2 border-t border-slate-100 pt-4 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4b7637]"></i> Secure storage for bridal trousseau</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4b7637]"></i> Close proximity to the main stage</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4b7637]"></i> Air-conditioned bridal comfort</li>
+                        </ul>
+                    </div>
+                    <a href="#enquire" class="btn-gauri-secondary text-center w-full">
+                        Enquire for Suites
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECTION: Green Celebrations (Gauri Greens 'Green Invitations' Equivalent) -->
+    <section id="green-celebrations" class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-[#3a3a3a]">
+                Green Celebrations
+            </h2>
+            <img src="images/heading-divider.png" alt="divider" class="heading-divider">
+
+            <div class="bg-[#f4f8f2] border border-[#4b7637]/20 rounded-3xl p-8 sm:p-12 shadow-sm text-center">
+                <p class="text-sm sm:text-base md:text-lg text-[#4b4f58] leading-relaxed max-w-3xl mx-auto">
+                    Indra Garden champions eco-friendly, green open-air celebrations. Surrounded by fresh air and lush foliage, celebrating under the open sky curtails artificial confinement and celebrates nature in harmony.
+                </p>
+
+                <div class="my-6">
+                    <p class="text-xs uppercase font-bold tracking-widest text-[#4b7637] mb-3">It follows the three mantras:</p>
+                    <div class="flex items-center justify-center gap-3 sm:gap-6 flex-wrap font-heading text-base sm:text-xl font-bold text-[#3a3a3a]">
+                        <span class="px-4 py-1.5 rounded-full bg-white border border-[#4b7637]/30 text-[#4b7637]">REDUCE</span>
+                        <span class="text-[#c5975a]">•</span>
+                        <span class="px-4 py-1.5 rounded-full bg-white border border-[#4b7637]/30 text-[#4b7637]">REUSE</span>
+                        <span class="text-[#c5975a]">•</span>
+                        <span class="px-4 py-1.5 rounded-full bg-white border border-[#4b7637]/30 text-[#4b7637]">RECYCLE</span>
                     </div>
                 </div>
 
-                <!-- 2: Real Night Hero Illuminated Lawn -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="night">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-hero-night.jpg" alt="Indra Garden Night Ambiance" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <p class="text-xs sm:text-sm text-[#5a6472] max-w-2xl mx-auto leading-relaxed">
+                    Essentially, celebrating at Indra Garden is an invitation to the future that leaves a lasting joyful mark on your beloved guests and on the earth.
+                </p>
+
+                <div class="pt-6">
+                    <a href="#enquire" class="btn-gauri-primary">
+                        Plan Your Green Celebration
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. SECTION: Events (Exact Gauri Greens 'Events' Section) -->
+    <section id="events" class="py-20 bg-[#f2f5f7] border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-[#3a3a3a]">
+                    Events
+                </h2>
+                <img src="images/heading-divider.png" alt="divider" class="heading-divider">
+                <p class="text-sm sm:text-base text-[#5a6472]">
+                    From intimate rituals to majestic gatherings, we host every special occasion with regal finesse.
+                </p>
+            </div>
+
+            <!-- 6 Event Cards Matching Gauri Greens -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+                
+                <div class="gauri-card p-6 flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-[#f4f8f2] text-[#4b7637] text-2xl flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-rings-wedding"></i>
                     </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Night Illumination</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Evening Lawn Ambiance</h4>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Weddings</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Vows & Mandap</p>
+                </div>
+
+                <div class="gauri-card p-6 flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-[#f4f8f2] text-[#4b7637] text-2xl flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-guitar"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Sangeet</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Dance & Music</p>
+                </div>
+
+                <div class="gauri-card p-6 flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-[#f4f8f2] text-[#4b7637] text-2xl flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Engagement</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Ring Ceremonies</p>
+                </div>
+
+                <div class="gauri-card p-6 flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-[#f4f8f2] text-[#4b7637] text-2xl flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-glass-water-droplet"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Anniversary</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Milestone Parties</p>
+                </div>
+
+                <div class="gauri-card p-6 flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-[#f4f8f2] text-[#4b7637] text-2xl flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Birthdays</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Jubilee Bashes</p>
+                </div>
+
+                <div class="gauri-card p-6 flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-[#f4f8f2] text-[#4b7637] text-2xl flex items-center justify-center mb-3">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Social Meets</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Cultural Assemblies</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SECTION: Best-In-Class/Add-Ons (Exact Gauri Greens Section) -->
+    <section id="add-ons" class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-[#3a3a3a]">
+                    Best-In-Class/Add-Ons
+                </h2>
+                <img src="images/heading-divider.png" alt="divider" class="heading-divider">
+                <p class="text-sm sm:text-base text-[#5a6472]">
+                    Customized premium enhancements to make your special day truly magical and grand.
+                </p>
+            </div>
+
+            <!-- 8 Add-Ons Matching Gauri Greens Exact List -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                
+                <div class="gauri-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-xl mx-auto mb-3">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Theme Based Decor</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Royal Mandap & Floral Stages</p>
+                </div>
+
+                <div class="gauri-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-xl mx-auto mb-3">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Celebrity Guest Entry</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Red Carpet Arrival Area</p>
+                </div>
+
+                <div class="gauri-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-xl mx-auto mb-3">
+                        <i class="fa-solid fa-person-walking-arrow-right"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Bridal Entry</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Phoolon Ki Chaadar Walkway</p>
+                </div>
+
+                <div class="gauri-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-xl mx-auto mb-3">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Folk Music & Shehnai</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Traditional Live Artists</p>
+                </div>
+
+                <div class="gauri-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-xl mx-auto mb-3">
+                        <i class="fa-solid fa-square-parking"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Valet & In-House Parking</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Dedicated Car & Bike Area</p>
+                </div>
+
+                <div class="gauri-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-xl mx-auto mb-3">
+                        <i class="fa-solid fa-wand-magic"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Varamala Event</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Cold Pyros & Low Fog Effects</p>
+                </div>
+
+                <div class="gauri-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-xl mx-auto mb-3">
+                        <i class="fa-solid fa-horse"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Baraat Procession</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Wide Unobstructed Pathway</p>
+                </div>
+
+                <div class="gauri-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-[#f4f8f2] text-[#4b7637] flex items-center justify-center text-xl mx-auto mb-3">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">LED Display & Generator</h4>
+                    <p class="text-[11px] text-[#5a6472] mt-1">Live Screens & 24x7 Power</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. SECTION: Celebrate Every Moment at Indra Garden (Photo Gallery) -->
+    <!-- REAL USER PHOTOS PLACED EXCLUSIVELY HERE. STRICTLY ZERO DUPLICATES. -->
+    <section id="gallery" class="py-20 bg-[#f2f5f7] border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-[#3a3a3a]">
+                    Celebrate Every Moment at Indra Garden
+                </h2>
+                <img src="images/heading-divider.png" alt="divider" class="heading-divider">
+                <p class="text-sm sm:text-base text-[#4b4f58] leading-relaxed">
+                    Indra Garden is more than being the best marriage garden in Jhansi. It is the perfect venue for all those special celebrations. Our lush green wedding venue is coupled with world-class amenities to boast a grand wedding or intimate gatherings to celebrate special life moments. The enchanting garden creates an atmosphere for each occasion.
+                </p>
+            </div>
+
+            <!-- Gallery Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#4b7637] text-white shadow-sm transition" data-filter="all">All Photos (12)</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white text-[#3a3a3a] border border-slate-200 hover:border-[#4b7637] transition" data-filter="lawn">Lawn & Grounds (4)</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white text-[#3a3a3a] border border-slate-200 hover:border-[#4b7637] transition" data-filter="stage">Stage & Mandap (3)</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white text-[#3a3a3a] border border-slate-200 hover:border-[#4b7637] transition" data-filter="dining">Dining & Pavilion (2)</button>
+                <button class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white text-[#3a3a3a] border border-slate-200 hover:border-[#4b7637] transition" data-filter="night">Night Ambiance (3)</button>
+            </div>
+
+            <!-- 12 Real Photos Grid (Strictly Unique, Zero Duplicates) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <!-- Photo 1: Real Mandap & Wedding Stage -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="stage">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-stage-mandap.jpg" alt="Indra Garden Stage & Mandap" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Stage & Mandap</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Decorated Wedding Mandap</h4>
                     </div>
                 </div>
 
-                <!-- 3: Real Dining Pavilion -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="lawn">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-dining-pavilion.jpg" alt="Indra Garden Dining Pavilion" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <!-- Photo 2: Real Illuminated Night Lawn -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="night">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-hero-night.jpg" alt="Indra Garden Evening Lawn" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
                     </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Dining Court</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Covered Dining Space</h4>
-                    </div>
-                </div>
-
-                <!-- 4: Real Stage Portrait Shot -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="stage">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-stage-portrait.jpg" alt="Indra Garden Stage Portrait" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Stage Detail</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Backdrop & Lighting</h4>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Night Ambiance</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Evening Illuminated Lawn</h4>
                     </div>
                 </div>
 
-                <!-- 5: Real Daytime Lush Lawn -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="lawn">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-lawn-daytime.jpg" alt="Indra Garden Lawn Daytime" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <!-- Photo 3: Real Covered Dining Pavilion -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="dining">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-dining-pavilion.jpg" alt="Indra Garden Dining Pavilion" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
                     </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Day View</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Lush Green Lawn</h4>
-                    </div>
-                </div>
-
-                <!-- 6: Real Aerial Grounds Overview -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="lawn">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-aerial-lawn.jpg" alt="Indra Garden Grounds Overview" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Grounds Overview</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Expansive Open Grounds</h4>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Dining & Pavilion</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Covered Dining Space</h4>
                     </div>
                 </div>
 
-                <!-- 7: Real Entrance Arch Gate -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="night">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-entrance-gate.jpg" alt="Indra Garden Entrance Gate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <!-- Photo 4: Real Stage Portrait Shot -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="stage">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-stage-portrait.jpg" alt="Indra Garden Stage Portrait" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
                     </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Entrance Gate</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Illuminated Welcome Arch</h4>
-                    </div>
-                </div>
-
-                <!-- 8: Real Banquet Setup -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="stage">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-banquet-setup.jpg" alt="Indra Garden Banquet Hall" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Banquet Hall</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Covered Hall & Seating</h4>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Stage & Mandap</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Stage Backdrop & Lighting</h4>
                     </div>
                 </div>
 
-                <!-- 9: Real Night Decor Lighting -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="night">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-night-decor.jpg" alt="Indra Garden Night Decor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <!-- Photo 5: Real Daytime Lush Green Lawn -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="lawn">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-lawn-daytime.jpg" alt="Indra Garden Daytime Lawn" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
                     </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Night Lights</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Stage Decorative Lights</h4>
-                    </div>
-                </div>
-
-                <!-- 10: Venue View 1 -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="lawn">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-venue-view-1.jpg" alt="Indra Garden Campus View" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Campus View</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Lawn & Perimeter View</h4>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Lawn & Grounds</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Lush Green Natural Turf</h4>
                     </div>
                 </div>
 
-                <!-- 11: Venue View 2 -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="stage">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-venue-view-2.jpg" alt="Indra Garden Pavilion" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <!-- Photo 6: Real Aerial Grounds Overview -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="lawn">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-aerial-lawn.jpg" alt="Indra Garden Grounds Overview" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
                     </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Ground View</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Pavilion & Seating Area</h4>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Lawn & Grounds</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Property Grounds Overview</h4>
                     </div>
                 </div>
 
-                <!-- 12: Venue View 3 -->
-                <div class="gallery-item group rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition duration-300" data-category="lawn">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="images/indra-venue-view-3.jpg" alt="Indra Garden Grounds Entrance" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <!-- Photo 7: Real Illuminated Welcome Arch Gate -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="night">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-entrance-gate.jpg" alt="Indra Garden Entrance Gate" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
                     </div>
-                    <div class="p-3.5 bg-white">
-                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-green">Corridor</span>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Main Campus Arrival Area</h4>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Night Ambiance</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Illuminated Welcome Arch</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 8: Real Banquet Setup -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="dining">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-banquet-setup.jpg" alt="Indra Garden Banquet Seating" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Dining & Pavilion</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Hall & Guest Seating Layout</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 9: Real Decorative Night Tree Lighting -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="night">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-night-decor.jpg" alt="Indra Garden Night Decor" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Night Ambiance</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Decorative Stage Lighting</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 10: Real Campus Perimeter & Green Boundary -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="lawn">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-venue-view-1.jpg" alt="Indra Garden Campus View" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Lawn & Grounds</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Lawn Perimeter & Greenery</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 11: Real Pavilion & Open Ground Angle -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="stage">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-venue-view-2.jpg" alt="Indra Garden Gathering Space" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Stage & Mandap</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Open Gathering Pavilion</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 12: Real Arrival Pathway & Main Campus View -->
+                <div class="gallery-card gauri-card overflow-hidden group" data-category="lawn">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="images/indra-venue-view-3.jpg" alt="Indra Garden Campus Walkway" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-[#4b7637] flex items-center justify-center text-sm shadow-md">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-[#4b7637]">Lawn & Grounds</span>
+                        <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm mt-0.5">Main Campus Arrival Area</h4>
                     </div>
                 </div>
 
@@ -569,179 +779,280 @@
         </div>
     </section>
 
-    <!-- SECTION: Frequently Asked Questions (FAQ Accordion matching Gauri Greens) -->
-    <section id="faq" class="py-20 bg-[#FAFBF9]">
+    <!-- 10. SECTION: Follow our Journey (Gauri Greens Matching Social Strip) -->
+    <section class="py-14 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-heading font-semibold text-[#3a3a3a]">
+                Follow our Journey
+            </h2>
+            <img src="images/heading-divider.png" alt="divider" class="heading-divider">
+            <p class="text-xs sm:text-sm text-[#5a6472] max-w-xl mx-auto mb-6">
+                Stay updated with latest wedding celebrations, stage decoration setups, and festive memories on our official channels.
+            </p>
+            <div class="flex items-center justify-center gap-4 flex-wrap">
+                <a href="https://instagram.com" target="_blank" class="btn-gauri-primary">
+                    <i class="fa-brands fa-instagram text-base"></i> Follow on Instagram
+                </a>
+                <a href="https://wa.me/919876543210" target="_blank" class="btn-gauri-secondary">
+                    <i class="fa-brands fa-whatsapp text-base"></i> Connect on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. SECTION: Frequently Asked Questions (Exact Gauri Greens Questions + Accordion) -->
+    <section id="faq" class="py-20 bg-[#f2f5f7] border-b border-slate-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-2xl mx-auto mb-14">
-                <span class="text-xs uppercase font-bold tracking-widest text-brand-green">Help & Information</span>
-                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 mt-1">Frequently Asked Questions</h2>
-                <p class="text-slate-500 text-xs sm:text-sm mt-2">Your queries related to our marriage garden & banquet hall in Jhansi, answered.</p>
-                <div class="w-16 h-1 bg-brand-green mx-auto mt-4 rounded-full"></div>
+                <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-[#3a3a3a]">
+                    Frequently Asked Questions
+                </h2>
+                <h4 class="text-xs sm:text-sm font-sans uppercase tracking-widest text-[#4b7637] font-semibold mt-1">
+                    Your Queries Related to Our Marriage Garden in Jhansi, Answered
+                </h4>
+                <img src="images/heading-divider.png" alt="divider" class="heading-divider">
             </div>
 
             <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center text-sm sm:text-base hover:text-brand-green transition">
-                        <span>What makes Indra Garden a preferred wedding venue in Jhansi?</span>
-                        <i class="fa-solid fa-chevron-down text-xs transition duration-300"></i>
+                
+                <!-- FAQ 1 (Gauri Greens Verbatim) -->
+                <div class="gauri-card overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-heading font-semibold text-[#3a3a3a] flex justify-between items-center text-sm sm:text-base hover:text-[#4b7637] transition">
+                        <span>What makes Indra Garden the best marriage garden in Jhansi?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition duration-300 text-[#4b7637]"></i>
                     </button>
-                    <div class="faq-answer hidden px-6 pb-4 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
-                        Indra Garden combines nature’s beauty with attentive hospitality. With a well-maintained open lawn, covered dining spaces, private dressing suites, and in-house parking, it provides a seamless setting for weddings, receptions, and celebrations.
+                    <div class="faq-answer hidden px-6 pb-5 text-[#4b4f58] text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        At Indra Garden, we blend nature’s beauty with attentive hospitality to create extraordinary events. Our maintained natural green lawn, covered dining pavilion, and dedicated team have earned us a reputation as one of the finest marriage gardens in Jhansi for wedding ceremonies, receptions, and festivals.
                     </div>
                 </div>
 
-                <!-- FAQ Item 2 -->
-                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center text-sm sm:text-base hover:text-brand-green transition">
-                        <span>Is there dedicated parking available for guests?</span>
-                        <i class="fa-solid fa-chevron-down text-xs transition duration-300"></i>
+                <!-- FAQ 2 (Gauri Greens Verbatim) -->
+                <div class="gauri-card overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-heading font-semibold text-[#3a3a3a] flex justify-between items-center text-sm sm:text-base hover:text-[#4b7637] transition">
+                        <span>What facilities do you have at your marriage garden in Jhansi?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition duration-300 text-[#4b7637]"></i>
                     </button>
-                    <div class="faq-answer hidden px-6 pb-4 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
-                        Yes, Indra Garden features dedicated in-house parking facilities for cars and two-wheelers, helping your guests park safely and enter without road congestion.
+                    <div class="faq-answer hidden px-6 pb-5 text-[#4b4f58] text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        We have everything you need to throw a successful event: maintained green lawns, covered dining pavilion, themed décor infrastructure, bridal dressing rooms, dedicated in-house parking, and heavy-duty 24x7 silent generator power backup. Our marriage garden in Jhansi can accommodate all kinds of events.
                     </div>
                 </div>
 
-                <!-- FAQ Item 3 -->
-                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center text-sm sm:text-base hover:text-brand-green transition">
-                        <span>What happens in case of a power outage during an event?</span>
-                        <i class="fa-solid fa-chevron-down text-xs transition duration-300"></i>
+                <!-- FAQ 3 (Gauri Greens Verbatim) -->
+                <div class="gauri-card overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-heading font-semibold text-[#3a3a3a] flex justify-between items-center text-sm sm:text-base hover:text-[#4b7637] transition">
+                        <span>Can I book your marriage lawn in Jhansi for outdoor functions?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition duration-300 text-[#4b7637]"></i>
                     </button>
-                    <div class="faq-answer hidden px-6 pb-4 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
-                        We have full 24x7 heavy-duty silent generator power backup that seamlessly runs stage lighting, lawn illumination, sound, and catering areas without interruption.
+                    <div class="faq-answer hidden px-6 pb-5 text-[#4b4f58] text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        Absolutely! Our spacious open lawn in Jhansi is suitable for outdoor weddings, haldi ceremonies, mehndi parties, sangeet nights, cocktail evenings, and receptions. With ambient evening lighting, customized decorations, and serene surroundings, we are committed to making your celebrations come to life.
                     </div>
                 </div>
 
-                <!-- FAQ Item 4 -->
-                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden shadow-sm">
-                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-800 flex justify-between items-center text-sm sm:text-base hover:text-brand-green transition">
+                <!-- FAQ 4 (Gauri Greens Verbatim) -->
+                <div class="gauri-card overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-heading font-semibold text-[#3a3a3a] flex justify-between items-center text-sm sm:text-base hover:text-[#4b7637] transition">
+                        <span>What makes you a top wedding venue in Jhansi?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition duration-300 text-[#4b7637]"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 text-[#4b4f58] text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        We have versatile spaces from sheltered dining pavilions to open-air natural lawns, and flexible spaces for unique event execution. As a leading wedding venue in Jhansi, we ensure smooth coordination and pristine grounds so you can focus on celebrating with your loved ones.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="gauri-card overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-heading font-semibold text-[#3a3a3a] flex justify-between items-center text-sm sm:text-base hover:text-[#4b7637] transition">
+                        <span>Is there dedicated in-house parking available for our guests?</span>
+                        <i class="fa-solid fa-chevron-down text-xs transition duration-300 text-[#4b7637]"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 text-[#4b4f58] text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        Yes, Indra Garden features dedicated in-house parking facilities for cars and two-wheelers, helping your guests park safely on the premises without road congestion.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="gauri-card overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-heading font-semibold text-[#3a3a3a] flex justify-between items-center text-sm sm:text-base hover:text-[#4b7637] transition">
                         <span>Can we visit the venue for an inspection before booking?</span>
-                        <i class="fa-solid fa-chevron-down text-xs transition duration-300"></i>
+                        <i class="fa-solid fa-chevron-down text-xs transition duration-300 text-[#4b7637]"></i>
                     </button>
-                    <div class="faq-answer hidden px-6 pb-4 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
-                        Yes, we warmly welcome families to visit Indra Garden physically between 9:00 AM and 9:00 PM daily. Simply call us or message our team via WhatsApp to coordinate your visit.
+                    <div class="faq-answer hidden px-6 pb-5 text-[#4b4f58] text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        Yes! We warmly welcome families to visit Indra Garden physically between 9:00 AM and 9:00 PM daily. Simply call our coordination team at +91 98765 43210 or submit the enquiry form below.
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- SECTION: Enquire Now! (Direct Booking Form, Zero Prices) -->
-    <section id="enquire" class="py-20 bg-white border-t border-b border-slate-100">
+    <!-- 12. SECTION: Enquire Now! (Exact Form Fields Matching Gauri Greens - Zero Pricing) -->
+    <section id="enquire" class="py-20 bg-white border-b border-slate-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-[#FAFBF9] to-white rounded-2xl border border-slate-200 p-8 sm:p-12 shadow-sm">
+            <div class="gauri-card p-8 sm:p-12 shadow-sm border border-slate-200">
+                
                 <div class="text-center mb-10">
-                    <span class="text-xs uppercase font-bold tracking-widest text-brand-green">Plan Your Event</span>
-                    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 mt-1">Enquire Now!</h2>
-                    <p class="text-slate-500 text-xs sm:text-sm mt-2">Fill in your requirements below to check date availability and schedule your venue visit.</p>
+                    <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-[#3a3a3a]">
+                        Enquire Now!
+                    </h2>
+                    <img src="images/heading-divider.png" alt="divider" class="heading-divider">
+                    <p class="text-xs sm:text-sm text-[#5a6472]">
+                        Fill in your details below to check date availability and schedule your personalized venue tour.
+                    </p>
                 </div>
 
                 <form id="bookingForm" class="space-y-5">
+                    
+                    <!-- First Name & Last Name (Matching Gauri Greens names[first_name], names[last_name]) -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">Full Name *</label>
-                            <input type="text" id="custName" required placeholder="Your Name" class="w-full px-4 py-3 rounded-md bg-white border border-slate-300 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-green text-sm">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#3a3a3a] mb-2">First Name *</label>
+                            <input type="text" id="firstName" required placeholder="First Name" class="w-full px-4 py-3 rounded-lg bg-[#fcfcfd] border border-slate-300 text-[#3a3a3a] placeholder-slate-400 focus:outline-none focus:border-[#4b7637] text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">Contact Number *</label>
-                            <input type="tel" id="custPhone" required placeholder="e.g. 9876543210" class="w-full px-4 py-3 rounded-md bg-white border border-slate-300 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-green text-sm">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#3a3a3a] mb-2">Last Name *</label>
+                            <input type="text" id="lastName" required placeholder="Last Name" class="w-full px-4 py-3 rounded-lg bg-[#fcfcfd] border border-slate-300 text-[#3a3a3a] placeholder-slate-400 focus:outline-none focus:border-[#4b7637] text-sm">
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                    <!-- Email & Mobile Number (Matching Gauri Greens email, numeric_field) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">Event Date *</label>
-                            <input type="date" id="eventDate" required class="w-full px-4 py-3 rounded-md bg-white border border-slate-300 text-slate-800 focus:outline-none focus:border-brand-green text-sm">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#3a3a3a] mb-2">Email Address</label>
+                            <input type="email" id="custEmail" placeholder="e.g. name@example.com" class="w-full px-4 py-3 rounded-lg bg-[#fcfcfd] border border-slate-300 text-[#3a3a3a] placeholder-slate-400 focus:outline-none focus:border-[#4b7637] text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">Occasion / Event *</label>
-                            <select id="eventType" class="w-full px-4 py-3 rounded-md bg-white border border-slate-300 text-slate-800 focus:outline-none focus:border-brand-green text-sm">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#3a3a3a] mb-2">Mobile Number *</label>
+                            <input type="tel" id="custPhone" required placeholder="e.g. 9876543210" class="w-full px-4 py-3 rounded-lg bg-[#fcfcfd] border border-slate-300 text-[#3a3a3a] placeholder-slate-400 focus:outline-none focus:border-[#4b7637] text-sm">
+                        </div>
+                    </div>
+
+                    <!-- Event Date & Event Type (Matching Gauri Greens datetime, input_text) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#3a3a3a] mb-2">Event Date *</label>
+                            <input type="date" id="eventDate" required class="w-full px-4 py-3 rounded-lg bg-[#fcfcfd] border border-slate-300 text-[#3a3a3a] focus:outline-none focus:border-[#4b7637] text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#3a3a3a] mb-2">Event Type *</label>
+                            <select id="eventType" class="w-full px-4 py-3 rounded-lg bg-[#fcfcfd] border border-slate-300 text-[#3a3a3a] focus:outline-none focus:border-[#4b7637] text-sm">
                                 <option value="Wedding & Reception">Wedding & Reception</option>
-                                <option value="Sangeet / Mehendi">Sangeet / Mehendi</option>
+                                <option value="Sangeet & Haldi Ceremony">Sangeet & Haldi Ceremony</option>
                                 <option value="Ring Ceremony / Engagement">Ring Ceremony / Engagement</option>
-                                <option value="Birthday Celebration">Birthday Celebration</option>
-                                <option value="Anniversary Gala">Anniversary Gala</option>
+                                <option value="Anniversary Party">Anniversary Party</option>
+                                <option value="Birthday Party">Birthday Party</option>
                                 <option value="Social Gathering">Social Gathering</option>
+                                <option value="Other Celebrations">Other Celebrations</option>
                             </select>
                         </div>
+                    </div>
+
+                    <!-- No. of Guests & No. of Rooms (Matching Gauri Greens numeric-field_1, numeric-field) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">Expected Attendance</label>
-                            <select id="guestCount" class="w-full px-4 py-3 rounded-md bg-white border border-slate-300 text-slate-800 focus:outline-none focus:border-brand-green text-sm">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#3a3a3a] mb-2">No. of Guests</label>
+                            <select id="guestCount" class="w-full px-4 py-3 rounded-lg bg-[#fcfcfd] border border-slate-300 text-[#3a3a3a] focus:outline-none focus:border-[#4b7637] text-sm">
                                 <option value="Up to 300 Guests">Up to 300 Guests</option>
                                 <option value="300 - 600 Guests">300 - 600 Guests</option>
                                 <option value="600 - 1,000 Guests">600 - 1,000 Guests</option>
                                 <option value="1,000+ Guests">1,000+ Guests</option>
                             </select>
                         </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#3a3a3a] mb-2">No. of Rooms Needed</label>
+                            <select id="roomCount" class="w-full px-4 py-3 rounded-lg bg-[#fcfcfd] border border-slate-300 text-[#3a3a3a] focus:outline-none focus:border-[#4b7637] text-sm">
+                                <option value="Dressing Suites Only">Dressing Suites Only</option>
+                                <option value="1 - 2 Rooms">1 - 2 Rooms</option>
+                                <option value="3 - 5 Rooms">3 - 5 Rooms</option>
+                                <option value="More than 5 Rooms">More than 5 Rooms</option>
+                            </select>
+                        </div>
                     </div>
 
+                    <!-- Message -->
                     <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">Message or Special Requests</label>
-                        <textarea id="custMessage" rows="3" placeholder="Tell us about your desired arrangements or questions..." class="w-full px-4 py-3 rounded-md bg-white border border-slate-300 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-green text-sm"></textarea>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-[#3a3a3a] mb-2">Your Message / Special Requests</label>
+                        <textarea id="custMessage" rows="3" placeholder="Tell us about your desired arrangements, timing, or special requirements..." class="w-full px-4 py-3 rounded-lg bg-[#fcfcfd] border border-slate-300 text-[#3a3a3a] placeholder-slate-400 focus:outline-none focus:border-[#4b7637] text-sm"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full py-4 rounded-md bg-brand-green hover:bg-brand-greenHover text-white font-bold text-xs uppercase tracking-wider transition duration-300 shadow-md flex items-center justify-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Send Inquiry via WhatsApp
-                    </button>
+                    <!-- Submit Button -->
+                    <div class="pt-2">
+                        <button type="submit" class="btn-gauri-primary w-full py-4 text-sm justify-center shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Send Enquiry via WhatsApp
+                        </button>
+                    </div>
                 </form>
+
             </div>
         </div>
     </section>
 
-    <!-- SECTION: Location & Directions (Google Maps Embed) -->
-    <section id="contact" class="py-20 bg-[#FAFBF9]">
+    <!-- 13. SECTION: Location & Google Maps -->
+    <section id="contact" class="py-20 bg-[#f2f5f7] border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Location Details -->
-                <div class="space-y-8">
+                
+                <!-- Address Details -->
+                <div class="space-y-6">
                     <div>
-                        <span class="text-xs uppercase font-bold tracking-widest text-brand-green">Reach Us</span>
-                        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 mt-1">Visit Indra Garden, Jhansi</h2>
-                        <p class="text-slate-600 text-xs sm:text-sm mt-2 font-light">
-                            Conveniently located at Bahar Unnao Gate on the main road near Naogoji Kua, Jhansi. Easily accessible from all city neighborhoods.
+                        <h2 class="text-3xl sm:text-4xl font-heading font-semibold text-[#3a3a3a]">
+                            Visit Indra Garden, Jhansi
+                        </h2>
+                        <img src="images/heading-divider.png" alt="divider" class="mx-0 my-3 h-8 w-auto object-contain">
+                        <p class="text-sm text-[#4b4f58] leading-relaxed">
+                            Conveniently located at Bahar Unnao Gate on the main road near Naogoji Kua, Jhansi. Easily accessible from all parts of Jhansi city with seamless connectivity.
                         </p>
                     </div>
 
-                    <div class="space-y-6">
+                    <div class="space-y-4 pt-2">
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-lg bg-white border border-slate-200 text-brand-green flex items-center justify-center text-xl shrink-0 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#4b7637] flex items-center justify-center text-xl shrink-0 shadow-sm">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">Address</h4>
-                                <p class="text-slate-600 text-xs mt-1">Indra Garden, Bahar Unnao Gate Main Road, Near Naogoji Kua, Jhansi, Uttar Pradesh - 284002</p>
+                                <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Address</h4>
+                                <p class="text-xs text-[#5a6472] mt-0.5">Bahar Unnao Gate Main Road, Near Naogoji Kua, Jhansi, Uttar Pradesh - 284002</p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-lg bg-white border border-slate-200 text-brand-green flex items-center justify-center text-xl shrink-0 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#4b7637] flex items-center justify-center text-xl shrink-0 shadow-sm">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">Phone Numbers</h4>
-                                <p class="text-slate-600 text-xs mt-1">
-                                    <a href="tel:+919876543210" class="hover:text-brand-green font-medium">+91 98765 43210</a>
+                                <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Phone Numbers</h4>
+                                <p class="text-xs text-[#5a6472] mt-0.5">
+                                    <a href="tel:+919876543210" class="hover:text-[#4b7637] font-medium">+91 98765 43210</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-lg bg-white border border-slate-200 text-brand-green flex items-center justify-center text-xl shrink-0 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#4b7637] flex items-center justify-center text-xl shrink-0 shadow-sm">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">WhatsApp Assistance</h4>
-                                <p class="text-slate-600 text-xs mt-1">
-                                    <a href="https://wa.me/919876543210" target="_blank" class="text-emerald-700 hover:underline font-medium">+91 98765 43210 (24x7 Available)</a>
+                                <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">WhatsApp Concierge</h4>
+                                <p class="text-xs text-[#5a6472] mt-0.5">
+                                    <a href="https://wa.me/919876543210" target="_blank" class="text-emerald-700 hover:underline font-medium">+91 98765 43210 (Direct Availability Check)</a>
                                 </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#4b7637] flex items-center justify-center text-xl shrink-0 shadow-sm">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-[#3a3a3a] text-sm">Visiting Hours</h4>
+                                <p class="text-xs text-[#5a6472] mt-0.5">9:00 AM – 9:00 PM (Monday to Sunday)</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Google Maps Frame -->
-                <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm h-[380px] bg-white">
+                <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm h-[400px] bg-white">
                     <iframe 
                         src="https://maps.google.com/maps?q=Indra+Garden+Unnao+Gate+Bahar+Jhansi+Uttar+Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         class="w-full h-full border-0" 
@@ -750,51 +1061,59 @@
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer (Matching Gauri Greens 4-Column Clean Layout) -->
-    <footer class="bg-[#1A261A] text-slate-300 py-16 text-xs border-t border-white/10">
+    <!-- 14. Footer (Exact Gauri Greens 4-Column Layout) -->
+    <footer class="bg-[#1c281a] text-slate-300 py-16 text-xs border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                
                 <!-- Col 1: About Us -->
                 <div>
-                    <h3 class="text-white font-heading font-bold text-base mb-4">About Us</h3>
+                    <h3 class="text-white font-heading font-semibold text-base mb-4">About Us</h3>
                     <p class="text-slate-400 leading-relaxed font-light mb-4">
-                        Indra Garden is a premier marriage garden and banquet hall destination in Jhansi. With maintained green lawns, covered dining, and attentive hospitality, we turn your cherished celebrations into unforgettable memories.
+                        It is the home to the finest celebrations and grandeur events. We, at INDRA GARDEN become your partner in making priceless memories, providing the best hospitality, covered dining space, grand décor and in-house parking facility in Jhansi.
                     </p>
+                    <div class="flex items-center gap-3 text-sm">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#4b7637] flex items-center justify-center text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#4b7637] flex items-center justify-center text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#4b7637] flex items-center justify-center text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
 
                 <!-- Col 2: Quick Links -->
                 <div>
-                    <h3 class="text-white font-heading font-bold text-base mb-4">Quick Links</h3>
+                    <h3 class="text-white font-heading font-semibold text-base mb-4">Quick Links</h3>
                     <ul class="space-y-2.5 text-slate-400">
                         <li><a href="#home" class="hover:text-amber-200 transition">Home</a></li>
-                        <li><a href="#why-us" class="hover:text-amber-200 transition">Why Indra Garden</a></li>
                         <li><a href="#venue-spaces" class="hover:text-amber-200 transition">The Venue</a></li>
+                        <li><a href="#why-us" class="hover:text-amber-200 transition">Why Indra Garden</a></li>
+                        <li><a href="#green-celebrations" class="hover:text-amber-200 transition">Green Ambience</a></li>
                         <li><a href="#gallery" class="hover:text-amber-200 transition">Photo Gallery</a></li>
                         <li><a href="#faq" class="hover:text-amber-200 transition">FAQs</a></li>
-                        <li><a href="#enquire" class="hover:text-amber-200 transition">Enquire Now</a></li>
+                        <li><a href="#enquire" class="hover:text-amber-200 transition">Enquire Now!</a></li>
                     </ul>
                 </div>
 
                 <!-- Col 3: Events -->
                 <div>
-                    <h3 class="text-white font-heading font-bold text-base mb-4">Events</h3>
+                    <h3 class="text-white font-heading font-semibold text-base mb-4">Events</h3>
                     <ul class="space-y-2.5 text-slate-400">
                         <li>Weddings & Receptions</li>
                         <li>Sangeet & Haldi Ceremony</li>
                         <li>Ring Ceremonies & Engagements</li>
                         <li>Anniversary Celebrations</li>
-                        <li>Birthday Bashes</li>
+                        <li>Birthday Celebrations</li>
                         <li>Social & Cultural Meets</li>
                     </ul>
                 </div>
 
                 <!-- Col 4: Contact Info -->
                 <div>
-                    <h3 class="text-white font-heading font-bold text-base mb-4">Contact Info</h3>
+                    <h3 class="text-white font-heading font-semibold text-base mb-4">Contact Info</h3>
                     <ul class="space-y-3 text-slate-400">
                         <li class="flex items-start gap-2.5">
                             <i class="fa-solid fa-location-dot text-amber-300 mt-1"></i>
@@ -805,34 +1124,60 @@
                             <a href="tel:+919876543210" class="hover:text-amber-200">+91 98765 43210</a>
                         </li>
                         <li class="flex items-center gap-2.5">
-                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
-                            <a href="https://wa.me/919876543210" target="_blank" class="hover:text-amber-200">WhatsApp Inquiry</a>
+                            <i class="fa-regular fa-envelope text-amber-300"></i>
+                            <a href="mailto:indragardenjhansi@gmail.com" class="hover:text-amber-200">indragardenjhansi@gmail.com</a>
                         </li>
                         <li class="flex items-center gap-2.5">
                             <i class="fa-regular fa-clock text-amber-300"></i>
-                            <span>Open Daily: 9:00 AM - 9:00 PM</span>
+                            <span>Daily: 9:00 AM - 9:00 PM</span>
                         </li>
                     </ul>
                 </div>
+
             </div>
 
             <!-- Bottom Copyright -->
             <div class="border-t border-white/10 mt-12 pt-8 text-center text-slate-500 text-xs">
-                &copy; 2026 Indra Garden, Jhansi. All Rights Reserved.
+                Copyright &copy; 2026 Indra Garden, Jhansi. All Rights Reserved.
             </div>
         </div>
     </footer>
 
-    <!-- Floating Action Buttons -->
-    <div class="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
-        <a href="https://wa.me/919876543210?text=Hello%20Indra%20Garden%20Team,%20I%20am%20interested%20in%20inquiring%20about%20booking%20the%20venue." target="_blank" aria-label="WhatsApp Concierge" class="w-13 h-13 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center text-2xl shadow-xl hover:scale-105 transition duration-300">
+    <!-- 15. Interactive Lightbox Modal for Photo Gallery -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 sm:p-8 backdrop-blur-md">
+        <!-- Close Button -->
+        <button id="lightboxClose" aria-label="Close modal" class="absolute top-5 right-5 text-white/80 hover:text-white text-3xl p-2 z-50 transition">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Previous Button -->
+        <button id="lightboxPrev" aria-label="Previous image" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl z-50 transition">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Next Button -->
+        <button id="lightboxNext" aria-label="Next image" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl z-50 transition">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Image & Caption Container -->
+        <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+            <img id="lightboxImg" src="" alt="Indra Garden Gallery Preview" class="max-h-[70vh] max-w-full rounded-xl object-contain shadow-2xl">
+            <div id="lightboxCaption" class="mt-4 text-center"></div>
+        </div>
+    </div>
+
+    <!-- 16. Floating Action Buttons (WhatsApp & Direct Call) -->
+    <div class="fixed bottom-5 right-5 z-40 flex flex-col gap-3">
+        <a href="https://wa.me/919876543210?text=Hello%20Indra%20Garden%20Jhansi,%20I%20am%20interested%20in%20inquiring%20about%20booking%20the%20venue." target="_blank" aria-label="WhatsApp Concierge" class="w-13 h-13 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center text-2xl shadow-xl hover:scale-105 transition duration-300">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="tel:+919876543210" aria-label="Call Reception" class="w-13 h-13 rounded-full bg-brand-green hover:bg-brand-greenHover text-white flex items-center justify-center text-xl shadow-xl hover:scale-105 transition duration-300">
+        <a href="tel:+919876543210" aria-label="Call Reception" class="w-13 h-13 rounded-full bg-[#4b7637] hover:bg-[#3b5f2b] text-white flex items-center justify-center text-xl shadow-xl hover:scale-105 transition duration-300">
             <i class="fa-solid fa-phone"></i>
         </a>
     </div>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>

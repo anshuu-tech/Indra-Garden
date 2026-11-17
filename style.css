@@ -1,7 +1,39 @@
 /* Gauri Greens Inspired Clean Light Theme Stylesheet for Indra Garden Jhansi */
 
+:root {
+    --ast-global-color-0: #4b7637; /* Gauri Greens Signature Forest / Olive Green */
+    --ast-global-color-1: #3a3a3a; /* Heading text color */
+    --ast-global-color-2: #3a3a3a;
+    --ast-global-color-3: #4b4f58; /* Body text color */
+    --ast-global-color-4: #f5f5f5; /* Light subtle card background */
+    --ast-global-color-5: #ffffff; /* White background */
+    --ast-global-color-6: #f2f5f7; /* Gauri Greens subtle section background */
+    --ast-global-color-7: #424242;
+    --ast-global-color-8: #000000;
+    --gold-accent: #c5975a;
+    --gold-light: #faf5ee;
+}
+
 html {
     scroll-behavior: smooth;
+    font-size: 93.75%;
+}
+
+body {
+    font-family: 'Times', 'Georgia', serif;
+    color: var(--ast-global-color-3);
+    background-color: var(--ast-global-color-5);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+    font-family: 'Playfair Display', 'Times', 'Georgia', serif;
+    color: var(--ast-global-color-1);
+    font-weight: 600;
+}
+
+p, span, li, button, input, select, textarea, .font-sans {
+    font-family: 'Roboto', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
 /* Custom Scrollbar */
@@ -10,16 +42,79 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #F1F5F9;
+    background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2B5E27;
+    background: #4b7637;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #224B1F;
+    background: #3d612d;
+}
+
+/* Gauri Greens Pill Buttons */
+.btn-gauri-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #4b7637;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 13.5px;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    padding: 11px 28px;
+    border-radius: 30px;
+    border: 1px solid #4b7637;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(75, 118, 55, 0.2);
+}
+
+.btn-gauri-primary:hover {
+    background-color: #3b5f2b;
+    border-color: #3b5f2b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(75, 118, 55, 0.3);
+}
+
+.btn-gauri-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #4b7637 !important;
+    font-weight: 600;
+    font-size: 13.5px;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    padding: 11px 28px;
+    border-radius: 30px;
+    border: 1px solid #4b7637;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-gauri-secondary:hover {
+    background-color: #f4f8f2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(75, 118, 55, 0.15);
+}
+
+/* Heading Divider Styling */
+.heading-divider {
+    display: block;
+    margin: 12px auto 18px auto;
+    height: 38px;
+    max-width: 320px;
+    width: auto;
+    object-contain: fit;
+    user-select: none;
+    pointer-events: none;
 }
 
 /* Date Input Indicator */
@@ -35,4 +130,46 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .faq-toggle.active i {
     transform: rotate(180deg);
+}
+
+/* Gallery Item Hover & Zoom */
+.gallery-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-card img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Lightbox Modal */
+#lightboxModal {
+    transition: opacity 0.3s ease;
+}
+
+#lightboxModal.active {
+    display: flex !important;
+}
+
+/* Feature Box Elevation */
+.gauri-card {
+    background: #ffffff;
+    border: 1px solid #e8ecef;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.gauri-card:hover {
+    border-color: rgba(75, 118, 55, 0.4);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
 }
