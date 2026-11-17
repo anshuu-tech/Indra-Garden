@@ -1,4 +1,4 @@
-// Professional Script for Indra Garden Jhansi
+// Interactive Script for Indra Garden Jhansi (Gauri Greens Inspired Theme)
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -14,13 +14,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Set minimum event date to today
+    // 2. Set Minimum Event Date to Today
     const eventDate = document.getElementById('eventDate');
     if (eventDate) {
         eventDate.setAttribute('min', new Date().toISOString().split('T')[0]);
     }
 
-    // 3. Booking Form Submission -> WhatsApp (Zero Price Mentions)
+    // 3. FAQ Accordion (Gauri Greens Style)
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const answer = btn.nextElementSibling;
+            const isOpen = !answer.classList.contains('hidden');
+
+            // Close all answers
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+            document.querySelectorAll('.faq-toggle').forEach(t => t.classList.remove('active'));
+
+            // Toggle current
+            if (!isOpen) {
+                answer.classList.remove('hidden');
+                btn.classList.add('active');
+            }
+        });
+    });
+
+    // 4. Booking Inquiry Submission -> WhatsApp
     const bookingForm = document.getElementById('bookingForm');
     if (bookingForm) {
         bookingForm.addEventListener('submit', (e) => {
@@ -35,33 +54,34 @@ document.addEventListener('DOMContentLoaded', () => {
             const whatsappNumber = '919876543210';
             let whatsappText = `*Indra Garden Jhansi - New Venue Inquiry*%0A%0A` +
                 `• *Name:* ${encodeURIComponent(name)}%0A` +
-                `• *Phone:* ${encodeURIComponent(phone)}%0A` +
-                `• *Target Date:* ${encodeURIComponent(date)}%0A` +
-                `• *Event Type:* ${encodeURIComponent(eventType)}%0A` +
-                `• *Estimated Guests:* ${encodeURIComponent(guests)}%0A`;
+                `• *Contact:* ${encodeURIComponent(phone)}%0A` +
+                `• *Event Date:* ${encodeURIComponent(date)}%0A` +
+                `• *Event / Occasion:* ${encodeURIComponent(eventType)}%0A` +
+                `• *Expected Attendance:* ${encodeURIComponent(guests)}%0A`;
 
             if (msg) {
-                whatsappText += `• *Inquiry / Notes:* ${encodeURIComponent(msg)}%0A`;
+                whatsappText += `• *Message / Special Notes:* ${encodeURIComponent(msg)}%0A`;
             }
 
-            whatsappText += `%0APlease let me know if this date is available and when we can visit the venue.`;
+            whatsappText += `%0APlease confirm date availability and let us know suitable timings for a physical venue tour.`;
 
             window.open(`https://wa.me/${whatsappNumber}?text=${whatsappText}`, '_blank');
         });
     }
 
-    // 4. Gallery Filter
+    // 5. Gallery Category Filter
     const filterButtons = document.querySelectorAll('.gallery-filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
+            // Update button styles
             filterButtons.forEach(b => {
-                b.classList.remove('bg-champagne-500', 'text-onyx-950');
-                b.classList.add('bg-onyx-900', 'text-slate-300');
+                b.classList.remove('bg-brand-green', 'text-white', 'shadow-sm');
+                b.classList.add('bg-slate-100', 'text-slate-700');
             });
-            btn.classList.remove('bg-onyx-900', 'text-slate-300');
-            btn.classList.add('bg-champagne-500', 'text-onyx-950');
+            btn.classList.remove('bg-slate-100', 'text-slate-700');
+            btn.classList.add('bg-brand-green', 'text-white', 'shadow-sm');
 
             const filter = btn.getAttribute('data-filter');
 

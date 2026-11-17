@@ -1,4 +1,4 @@
-/* Professional Luxury Stylesheet for Indra Garden Jhansi */
+/* Gauri Greens Inspired Clean Light Theme Stylesheet for Indra Garden Jhansi */
 
 html {
     scroll-behavior: smooth;
@@ -6,24 +6,33 @@ html {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #07090E;
+    background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #C5976A;
-    border-radius: 3px;
+    background: #2B5E27;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #D2AF8B;
+    background: #224B1F;
 }
 
 /* Date Input Indicator */
 input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(0.8);
     cursor: pointer;
+    opacity: 0.7;
+}
+
+/* FAQ Accordion Styling */
+.faq-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.faq-toggle.active i {
+    transform: rotate(180deg);
 }
